@@ -6,6 +6,8 @@ from libraries.resizing import expand_cube
 from libraries.packing import pack, unpack
 from libraries.renderer import render_shapes
 from libraries.rotation import all_rotations
+import tracemalloc
+import scipy.sparse as sp
 
 
 def log_if_needed(n, total_n):
@@ -96,6 +98,45 @@ def get_canonical_packing(polycube: np.ndarray,
     return max_id
 
 
+
+def can_be_sparsified_csr(matrix: np.ndarray):
+    size = matrix.shape
+    if len(size) > 2:
+        size = (size[0], size[1] * size[2])
+        return sum(matrix.flatten()) < (size[0] * (size[1] - 1) - 1) / 2
+
+    elif len(size) == 1:
+        return sum(matrix.flatten()) < (size[0] * (size[1] - 1) - 1) / 2
+
+    else:
+        return False
+
+
+def can_be_sparsified_coo(matrix: np.ndarray):
+    return sum(matrix.flatten()) / len(matrix.flatten()) < 1/3
+
+
+def return_cube_is_shrunk_coo(matrix: np.ndarray) -> (bool, any):
+    if can_be_sparsified_coo(matrix):
+        shape = matrix.shape
+        if len(shape) > 2:
+            matrix = matrix.resize((shape[0], shape[1] * shape[2]))
+        return (True, shape), sp.coo_matrix(matrix)
+    else:
+        return False, matrix
+
+
+def return_cube_is_shrunk_csr(matrix: np.ndarray) -> ((bool, tuple[int, int, int]), any):
+    if can_be_sparsified_csr(matrix):
+        shape = matrix.shape
+        if len(shape) > 2:
+            print(matrix.dtype)
+            return (True, shape), sp.csr_matrix(matrix.resize((shape[0], shape[1] * shape[2])))
+        return (True, shape), sp.csr_matrix(matrix)
+    else:
+        return (False, ()), matrix
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         prog='Polycube Generator',
@@ -117,7 +158,27 @@ if __name__ == "__main__":
     # Start the timer
     t1_start = perf_counter()
 
+    tracemalloc.start()
     all_cubes = generate_polycubes(n, use_cache=use_cache)
+    print("simple implementation memory used: ", all_cubes.__sizeof__())
+    tracemalloc.stop()
+
+    tracemalloc.start()
+    all_cubes_csr = [(return_cube_is_shrunk_csr(cube)) for cube in all_cubes]
+    print("csr implementation memory used: ", all_cubes_csr.__sizeof__())
+    tracemalloc.stop()
+
+    tracemalloc.start()
+    all_cubes_coo = [(return_cube_is_shrunk_coo(cube)) for cube in all_cubes]
+    print("coo implementation memory used: ", all_cubes_coo.__sizeof__())
+    tracemalloc.stop()
+
+    sparsity = sum([sum(cube.flatten()) / len(cube.flatten()) for cube in all_cubes]) / len(all_cubes)
+    print("we have the sparsity : ", sparsity)
+
+    should_be_sparsified_csr = sum([1 if can_be_sparsified_csr(cube) else 0 for cube in all_cubes]) / len(all_cubes)
+    should_be_sparsified_coo = sum([1 if can_be_sparsified_coo(cube) else 0 for cube in all_cubes]) / len(all_cubes)
+    print(should_be_sparsified_coo, should_be_sparsified_csr)
 
     # Stop the timer
     t1_stop = perf_counter()
