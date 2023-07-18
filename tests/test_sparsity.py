@@ -1,18 +1,21 @@
 import numpy as np
+import sys
+sys.path.insert(1, '../')
+
 import argparse
 from time import perf_counter
-from libraries.cache import get_cache, save_cache, cache_exists
-from libraries.resizing import expand_cube
-from libraries.packing import pack, unpack
-from libraries.renderer import render_shapes
-from libraries.rotation import all_rotations
 import tracemalloc
 import scipy.sparse as sp
 from cubes import generate_polycubes
 from sys import getsizeof
+import pickle
+
+
+
 
 def get_sparse_data(sparse_matrix):
-    return sparse_matrix.data.nbytes + sparse_matrix.indptr.nbytes + sparse_matrix.indices.nbytes
+    # print(sparse_matrix.data.nbytes)
+    return sparse_matrix.data.nbytes
 
 
 def can_be_sparsified_csr(matrix: np.ndarray):
@@ -29,18 +32,18 @@ def can_be_sparsified_coo(matrix: np.ndarray):
     return True
     size = matrix.shape
     if len(size) > 2:
-        return matrix.__sizeof__() > sp.coo_array(matrix.reshape(size[0], size[1] *  size[2])).__sizeof__()
+        return matrix.__sizeof__() > sp.coo_matrix(matrix.reshape(size[0], size[1] *  size[2])).__sizeof__()
 
     else:
-        return matrix.__sizeof__() > sp.coo_array(matrix).__sizeof__()
+        return matrix.__sizeof__() > sp.coo_matrix(matrix).__sizeof__()
 
 
 def return_cube_is_shrunk_coo(matrix: np.ndarray) -> any:
     if can_be_sparsified_coo(matrix):
         shape = matrix.shape
         if len(shape) > 2:
-            matrix = matrix.resize((shape[0], shape[1] * shape[2]))
-        return sp.coo_matrix(matrix)
+            matrix = matrix.resize((shape[0], shape[1] * shape[2]), dtype=np.uint8)
+        return sp.coo_matrix(matrix, dtype=np.uint8)
     else:
         return matrix
 
@@ -49,12 +52,10 @@ def return_cube_is_shrunk_csr(matrix: np.ndarray) -> any:
     if can_be_sparsified_csr(matrix):
         shape = matrix.shape
         if len(shape) > 2:
-            return sp.csr_matrix(matrix.resize((shape[0], shape[1] * shape[2])))
-        return sp.csr_matrix(matrix)
+            return sp.csr_matrix(matrix.resize((shape[0], shape[1] * shape[2])), dtype=np.uint8)
+        return sp.csr_matrix(matrix, dtype=np.uint8)
     else:
         return matrix
-
-
 
 
 if __name__ == "__main__":
@@ -78,24 +79,32 @@ if __name__ == "__main__":
 
     data = dict()
 
+    values = []
     
     tracemalloc.start()
 
+    print(tracemalloc.get_traced_memory())
 
     all_cubes = generate_polycubes(n, use_cache=use_cache)
 
     print(tracemalloc.get_traced_memory())
+    values += [tracemalloc.get_traced_memory()[0]]
 
     all_cubes_csr = [(return_cube_is_shrunk_csr(cube)) for cube in all_cubes]
 
     print(tracemalloc.get_traced_memory())
+    values += [tracemalloc.get_traced_memory()[0] - sum(values)]
 
     all_cubes_coo = [(return_cube_is_shrunk_coo(cube)) for cube in all_cubes]
 
     print(tracemalloc.get_traced_memory())
+    values += [tracemalloc.get_traced_memory()[0] - sum(values)]
+
+    print(values)
+    print(sum([get_sparse_data(cube) for cube in all_cubes_coo]))
+    print(sum([get_sparse_data(cube) for cube in all_cubes_csr]))
 
     tracemalloc.stop()
-
 
     for i in range(5, 5):
         data[i] = dict()
@@ -105,11 +114,11 @@ if __name__ == "__main__":
         data[i]["size_current"] = all_cubes.__sizeof__() + size
 
         all_cubes_csr = [(return_cube_is_shrunk_csr(cube)) for cube in all_cubes]
-        size = sum([cube.__sizeof__() for cube in  all_cubes_csr]) 
+        size = sum([cube.__sizeof__() for cube in  all_cubes_csr])
         data[i]["size_csr"] = all_cubes_csr.__sizeof__() + size
 
         all_cubes_coo = [(return_cube_is_shrunk_coo(cube)) for cube in all_cubes]
-        size = sum([cube.__sizeof__() for cube in  all_cubes_coo]) 
+        size = sum([cube.__sizeof__() for cube in  all_cubes_coo])
         data[i]["size_coo"] = all_cubes_coo.__sizeof__() + size
 
         sparsity = sum([sum(cube.flatten()) / len(cube.flatten()) for cube in all_cubes]) / len(all_cubes)
