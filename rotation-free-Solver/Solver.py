@@ -6,6 +6,7 @@ import numpy as np
 import cube_utils as cu
 import tracemalloc
 
+
 class CubeSolver:
     def __repr__(self):
         value = []
@@ -53,7 +54,7 @@ if __name__ == "__main__":
     print(f"Elapsed time: {round(t1_stop - t1_start, 3)}s")
     print(tracemalloc.get_traced_memory())
 
-    val = np.load("../cubes_7.npy", allow_pickle=True)
+    val = np.load("../tests/cubes_7.npy", allow_pickle=True)
     print(len(val))
     tracemalloc.stop()
     # print(val)
