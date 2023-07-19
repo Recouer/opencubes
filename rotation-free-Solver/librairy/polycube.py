@@ -42,8 +42,6 @@ class PolyCube:
         Returns: a path inside the node starting from a polycube with starter_nodes neighbor
 
         """
-        # TODO: also put inside the parse the time when we backtrack in the polycube to take into account
-        #       the full path
 
         if self.__parses:
             returned_parses = copy.deepcopy(self.__parses)
@@ -58,20 +56,30 @@ class PolyCube:
         def create_parse_rec(adjacency_matrix: npt.NDArray,
                              parse_list: list[int],
                              node: int,
+                             backtrack : int,
                              traversed_node: list[bool]):
             traversed_node[node] = True
             adjacency_list = dict(
                 [(adjacency, i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
             )
+
             for adjacency in sort_order:
                 if adjacency in adjacency_list.keys() and not traversed_node[adjacency_list[adjacency]]:
+                    if backtrack > 0:
+                        parse_list += [f"BT:{backtrack}"]
+                        backtrack = 0
+
                     parse_list += [adjacency]
-                    create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], traversed_node)
+                    create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack, traversed_node)
+                    backtrack += 1
+
 
         for index in indexes:
             parse_list = []
-            create_parse_rec(self.adjacency_matrix, parse_list, index,
+            create_parse_rec(self.adjacency_matrix, parse_list, index, 0,
                              [False for _ in range(len(self.adjacency_matrix))])
+            if isinstance(parse_list[-1], str):
+                parse_list.pop(len(parse_list) - 1)
             if parse_list not in self.__parses:
                 self.__parses += [copy.deepcopy(parse_list)]
 
@@ -100,3 +108,16 @@ class PolyCube:
                 update_adjacency_matrix(new_adjacency_matrix, new_position_vector)
 
                 yield PolyCube(new_adjacency_matrix, new_position_vector)
+
+
+if __name__ == "__main__":
+
+    poly1 = PolyCube(
+        gu.get_adjacency_matrix_from_position_vector([(0, 0, 0), (0, 1, 0), (0, 2, 0), (0, 3, 0)]),
+        [(0, 0, 0), (0, 1, 0), (0, 2, 0), (0, 3, 0)]
+    )
+
+    print(poly1.cube_identity)
+    print(poly1.get_parses(2))
+
+    pass
