@@ -30,6 +30,9 @@ class PolyCube:
         # string += self.adjacency_matrix.__repr__() + "\n"
         return string
 
+    def get_adjacencies(self, node_index: int) -> dict:
+        return dict([(adjacency, i) for (i, adjacency) in enumerate(self.adjacency_matrix[node_index]) if adjacency != 0])
+
     def get_parses(self, starter_nodes: int):
         """
         this function is used to return a path inside the polycube.
@@ -117,6 +120,7 @@ if __name__ == "__main__":
         [(0, 0, 0), (0, 1, 0), (0, 2, 0), (0, 3, 0)]
     )
 
+    print(poly1.get_adjacencies(0))
     print(poly1.cube_identity)
     print(poly1.get_parses(2))
 

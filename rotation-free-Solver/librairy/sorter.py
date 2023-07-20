@@ -16,9 +16,12 @@ class Sorter:
     a polycube is the same as another one.
     """
 
-    def __init__(self):
-        self.children: dict[int, Sorter] = dict()
+    def __init__(self, connection = 0, parent=None):
+        self.parent = parent
+        self.children: dict[any, Sorter] = dict()
         self.leaf_polycube = None
+        self.connection = connection
+
 
     def __repr__(self):
         if self.leaf_polycube is not None:
@@ -39,7 +42,7 @@ class Sorter:
         """
         child = self.children.get(position)
         if child is None:
-            child = Sorter()
+            child = Sorter(position, self)
             self.children[position] = child
 
         return child
@@ -56,6 +59,10 @@ class Sorter:
         Returns:
 
         """
+
+
+
+
         child = self
         for _parse in polyparse:
             polycube_parse = eq_dict[_parse] if eq_dict[_parse] != 0 else _parse
@@ -84,20 +91,30 @@ class PolycubeSorter:
         string += self.sorter.__repr__()
         return string
 
-    def __is_inside_rec(self, sorter: Sorter, poly_parse: list[int], eq_list: dict[int, int]) -> bool:
+    def __is_inside_rec(self, sorter: Sorter, polycube: PolyCube, current_node: int, traversed_list: list[bool], current_parse: list, eq_list: dict[int, int]) -> bool:
         # TODO :    Change the function to check the paths inside the polycube instead of the paths
         #           inside the sorter using the paths of the polycubes
+        sort_order = [1, 2, 4, 8, 16, 32]
+        traversed_list[current_node] = True
+        adjacencies = polycube.get_adjacencies(current_node)
 
-        if len(poly_parse) > 0:
-            connection = poly_parse.pop(0)
-            return_value = False
-            for (child, child_sorter) in sorter.children.items():
-                new_list = copy.deepcopy(eq_list)
-                if has_equivalence(connection, child, new_list):
-                    return_value |= self.__is_inside_rec(child_sorter, copy.deepcopy(poly_parse), new_list)
-            return return_value
-        else:
-            return True
+        # if this is true, it means that we have explored all the possible adjacent cube
+        # and that we need to backtrack in order to continue exploring the polycube.
+        if all([traversed_list[traversed] for traversed in adjacencies.keys()]):
+            for child in sorter.children.items():
+                if isinstance(child[0], str):
+                    # check that the backtracking is correct: that is, that we effectively need to backtrack the
+                    # right amount of cubes in order to get the first cube with a connection to a nonexplored cube
+                    pass
+        
+        # else we can still continue exploring without backtracking and thus we continue.
+        for child in sorter.children.items():
+            for adjacency, cube_index in adjacencies.items():
+                # in this case we have to check depending on the equivalence list if there is the next connection
+                # corresponding to the sort order and if it is not, it means that there is no correspondance 
+                # between all the polycube derived from that branchand the search can be stopped.
+                pass
+        pass
 
     def try_add_polycube(self, polycube: PolyCube) -> bool:
         """
@@ -128,6 +145,8 @@ class PolycubeSorter:
             polycube_parsers = polycube.get_parses(self.starter_node)
             can_be_added = True
             equivalence_list = dict({1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0})
+
+            # one eq_list for each starting node
             final_eq_list: dict[any, int] = dict({1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0, "index": -1})
             for polycube_parse in polycube_parsers:
                 final_eq_list["index"] = final_eq_list["index"] + 1
