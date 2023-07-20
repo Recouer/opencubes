@@ -59,10 +59,6 @@ class Sorter:
         Returns:
 
         """
-
-
-
-
         child = self
         for _parse in polyparse:
             polycube_parse = eq_dict[_parse] if eq_dict[_parse] != 0 else _parse
@@ -105,15 +101,29 @@ class PolycubeSorter:
                 if isinstance(child[0], str):
                     # check that the backtracking is correct: that is, that we effectively need to backtrack the
                     # right amount of cubes in order to get the first cube with a connection to a nonexplored cube
-                    pass
+                    backtrack: int = int(child[0].split(':')[1])
+                    backtrack_node: int = current_node
+                    backtracks_rec: int = 0
+                    for i in range(len(current_parse)-1, len(current_parse) - 1 - backtrack):
+                        index = i - backtracks_rec
+                        while isinstance(current_parse[index], str):
+                            backtracks_rec += int(current_parse[index].split(':')[1])
+                            index = i - backtracks_rec
+
+                        backtrack_node = polycube.get_adjacent_node(backtrack_node, current_parse[index])
+                        adjacents = polycube.get_adjacencies(backtrack_node)
+                        if not all([traversed_list[traversed] for traversed in adjacents.keys()]):
+                            continue
+                    self.__is_inside_rec(sorter, polycube, backtrack_node, traversed_list, current_parse, eq_list)
         
         # else we can still continue exploring without backtracking and thus we continue.
-        for child in sorter.children.items():
-            for adjacency, cube_index in adjacencies.items():
-                # in this case we have to check depending on the equivalence list if there is the next connection
-                # corresponding to the sort order and if it is not, it means that there is no correspondance 
-                # between all the polycube derived from that branchand the search can be stopped.
-                pass
+        else:
+            for child in sorter.children.items():
+                for adjacency, cube_index in adjacencies.items():
+                    # in this case we have to check depending on the equivalence list if there is the next connection
+                    # corresponding to the sort order and if it is not, it means that there is no correspondance 
+                    # between all the polycube derived from that branchand the search can be stopped.
+                    pass
         pass
 
     def try_add_polycube(self, polycube: PolyCube) -> bool:

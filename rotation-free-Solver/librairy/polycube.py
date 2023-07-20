@@ -29,6 +29,13 @@ class PolyCube:
         string = self.position_vector.__repr__() + "\n"
         # string += self.adjacency_matrix.__repr__() + "\n"
         return string
+    
+    def get_adjacent_node(self, node: int, adjacency: int):
+        for _adjacency, neighbor in self.get_adjacencies(node):
+            if _adjacency == adjacency:
+                return neighbor
+        
+        raise ValueError("no cube with such adjacency in the polygraph")
 
     def get_adjacencies(self, node_index: int) -> dict:
         return dict([(adjacency, i) for (i, adjacency) in enumerate(self.adjacency_matrix[node_index]) if adjacency != 0])
