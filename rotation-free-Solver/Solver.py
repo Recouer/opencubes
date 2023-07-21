@@ -1,9 +1,13 @@
 from __future__ import annotations
+import sys
+sys.path.insert(1, "./librairy/")
 
 from time import perf_counter
 
 import numpy as np
-import cube_utils as cu
+from holder import PolycubeHolder
+from polycube import PolyCube
+from utils import identity_to_tag
 import tracemalloc
 
 
@@ -18,8 +22,8 @@ class CubeSolver:
         return string
 
     def __init__(self):
-        initial_holder = cu.PolycubeHolder("C0")
-        initial_holder.add_polycube(cu.PolyCube(np.array([[0]]), [(0, 0, 0)]))
+        initial_holder = PolycubeHolder("C0")
+        initial_holder.add_polycube(PolyCube(np.array([[0]]), [(0, 0, 0)]))
 
         self.polycube_per_number_of_cubes = {1: {"C0": initial_holder}}
 
@@ -31,11 +35,11 @@ class CubeSolver:
                 for polycube in self.polycube_per_number_of_cubes[i].get(polycube_type).polycubes:
                     new_PCPOs = polycube.iterate_through_All_PCPO()
                     for PCPO in new_PCPOs:
-                        tag = cu.identity_to_tag(PCPO.cube_identity)
+                        tag = identity_to_tag(PCPO.cube_identity)
                         if self.polycube_per_number_of_cubes[i + 1].get(tag) is not None:
                             self.polycube_per_number_of_cubes[i + 1][tag].add_polycube(PCPO)
                         else:
-                            self.polycube_per_number_of_cubes[i + 1][tag] = cu.PolycubeHolder(tag)
+                            self.polycube_per_number_of_cubes[i + 1][tag] = PolycubeHolder(tag)
                             self.polycube_per_number_of_cubes[i + 1][tag].add_polycube(PCPO)
 
 

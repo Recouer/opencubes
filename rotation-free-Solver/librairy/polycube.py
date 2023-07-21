@@ -88,10 +88,11 @@ class PolyCube:
             parse_list = []
             create_parse_rec(self.adjacency_matrix, parse_list, index, 0,
                              [False for _ in range(len(self.adjacency_matrix))])
-            if isinstance(parse_list[-1], str):
-                parse_list.pop(len(parse_list) - 1)
-            if parse_list not in self.__parses:
-                self.__parses += [copy.deepcopy(parse_list)]
+            if parse_list:
+                if isinstance(parse_list[len(parse_list) - 1], str):
+                    parse_list.pop(len(parse_list) - 1)
+                if parse_list not in self.__parses:
+                    self.__parses += [copy.deepcopy(parse_list)]
 
         returned_parses = copy.deepcopy(self.__parses)
         return returned_parses

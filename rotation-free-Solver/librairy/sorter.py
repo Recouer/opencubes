@@ -115,16 +115,34 @@ class PolycubeSorter:
                         if not all([traversed_list[traversed] for traversed in adjacents.keys()]):
                             continue
                     self.__is_inside_rec(sorter, polycube, backtrack_node, traversed_list, current_parse, eq_list)
-        
+
         # else we can still continue exploring without backtracking and thus we continue.
         else:
-            for child in sorter.children.items():
-                for adjacency, cube_index in adjacencies.items():
-                    # in this case we have to check depending on the equivalence list if there is the next connection
-                    # corresponding to the sort order and if it is not, it means that there is no correspondance 
-                    # between all the polycube derived from that branchand the search can be stopped.
-                    pass
-        pass
+            # in this case we have to check depending on the equivalence list if there is the next connection
+            # corresponding to the sort order and if it is not, it means that there is no correspondance 
+            # between all the polycube derived from that branch and thus the search can be stopped.
+
+            # if we find a correspondance between the first element of the sorter and an unexplored cube 
+            # then we update the equivalence list and continue inside
+            minimum_sorter: int = min([key for key in sorter.children.keys() if isinstance(key, int)])
+
+            for adja in polycube.get_adjacencies(current_node):
+                if eq_list[adja[0]] != 0 and not traversed_list[adja[1]] and eq_list[adja[0]] == minimum_sorter:
+                    current_parse += [minimum_sorter]
+                    new_node = polycube.get_adjacent_node(node=current_node, adjacency=adja[1])
+                    self.__is_inside_rec(sorter, polycube, new_node, traversed_list, current_parse, eq_list)
+                    break
+            
+
+            possible_connection_equivalences = dict([adja for adja in polycube.get_adjacencies(current_node).items()
+                                  if eq_list[adja[0]] == 0 and not traversed_list[adja[1]]])
+            
+            for connection in possible_connection_equivalences.keys():
+                if has_equivalence(connection, minimum_sorter, eq_list):
+                    new_node = possible_connection_equivalences[connection]
+                    current_parse += [minimum_sorter]
+                    self.__is_inside_rec(sorter, polycube, new_node, traversed_list, current_parse, eq_list)
+
 
     def try_add_polycube(self, polycube: PolyCube) -> bool:
         """
