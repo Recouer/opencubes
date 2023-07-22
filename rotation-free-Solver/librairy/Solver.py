@@ -1,14 +1,13 @@
 from __future__ import annotations
 import sys
-sys.path.insert(1, "./librairy/")
-
 from time import perf_counter
-
 import numpy as np
 from holder import PolycubeHolder
 from polycube import PolyCube
 from utils import identity_to_tag
 import tracemalloc
+
+# sys.path.insert(1, "./rotation-free-Solver/librairy/")
 
 
 class CubeSolver:
@@ -49,7 +48,7 @@ if __name__ == "__main__":
     t1_start = perf_counter()
 
     solver = CubeSolver()
-    solver.solve(7)
+    solver.solve(4)
     print(solver)
 
     # Stop the timer

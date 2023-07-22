@@ -6,6 +6,29 @@ import numpy.typing as npt
 from collections import Counter
 from utils import update_adjacency_matrix
 
+sort_order = [1, 2, 4, 8, 16, 32]
+
+
+def create_parse_rec(adjacency_matrix: npt.NDArray,
+                     parse_list: list[any],
+                     node: int,
+                     backtrack: int,
+                     traversed_node: list[bool]):
+    traversed_node[node] = True
+    adjacency_list = dict(
+        [(adjacency, i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
+    )
+
+    for adjacency in sort_order:
+        if adjacency in adjacency_list.keys() and not traversed_node[adjacency_list[adjacency]]:
+            if backtrack > 0:
+                parse_list.append(f"BT:{backtrack}")
+                backtrack = 0
+
+            parse_list.append(adjacency)
+            create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack, traversed_node)
+            backtrack += 1
+
 
 class PolyCube:
     """
@@ -27,18 +50,32 @@ class PolyCube:
     def __repr__(self):
         # string = self.cube_identity.__repr__() + "\n"
         string = self.position_vector.__repr__() + "\n"
-        # string += self.adjacency_matrix.__repr__() + "\n"
+        #string += self.adjacency_matrix.__repr__() + "\n"
         return string
-    
+
+    def get_nodes_with_NAdjacencies(self, adjacencies: int):
+        return [index for index in range(len(self.cube_identity)) if self.cube_identity[index] == adjacencies]
+
     def get_adjacent_node(self, node: int, adjacency: int):
-        for _adjacency, neighbor in self.get_adjacencies(node):
+        for _adjacency, neighbor in self.get_adjacencies(node).items():
             if _adjacency == adjacency:
                 return neighbor
-        
+
         raise ValueError("no cube with such adjacency in the polygraph")
 
-    def get_adjacencies(self, node_index: int) -> dict:
-        return dict([(adjacency, i) for (i, adjacency) in enumerate(self.adjacency_matrix[node_index]) if adjacency != 0])
+    def get_adjacencies(self, node_index: int) -> dict[int, int]:
+
+        print("get adjacencies: ", self.adjacency_matrix[node_index], node_index)
+
+        return dict(
+            [(adjacency, i) for (i, adjacency) in enumerate(self.adjacency_matrix[node_index]) if adjacency != 0]
+        )
+
+    def get_parse_from_cube(self, cube: int):
+        parse_list = []
+        create_parse_rec(self.adjacency_matrix, parse_list, cube, 0,
+                         [False for _ in range(len(self.adjacency_matrix))])
+        return parse_list
 
     def get_parses(self, starter_nodes: int):
         """
@@ -57,32 +94,9 @@ class PolyCube:
             returned_parses = copy.deepcopy(self.__parses)
             return returned_parses
 
-        indexes = [index for index in range(len(self.cube_identity)) if self.cube_identity[index] == starter_nodes]
+        indexes = self.get_nodes_with_NAdjacencies(starter_nodes)
         if not indexes:
             raise AttributeError("starter node not present into the polycube")
-
-        sort_order = [1, 2, 4, 8, 16, 32]
-
-        def create_parse_rec(adjacency_matrix: npt.NDArray,
-                             parse_list: list[int],
-                             node: int,
-                             backtrack : int,
-                             traversed_node: list[bool]):
-            traversed_node[node] = True
-            adjacency_list = dict(
-                [(adjacency, i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
-            )
-
-            for adjacency in sort_order:
-                if adjacency in adjacency_list.keys() and not traversed_node[adjacency_list[adjacency]]:
-                    if backtrack > 0:
-                        parse_list += [f"BT:{backtrack}"]
-                        backtrack = 0
-
-                    parse_list += [adjacency]
-                    create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack, traversed_node)
-                    backtrack += 1
-
 
         for index in indexes:
             parse_list = []
@@ -92,7 +106,7 @@ class PolyCube:
                 if isinstance(parse_list[len(parse_list) - 1], str):
                     parse_list.pop(len(parse_list) - 1)
                 if parse_list not in self.__parses:
-                    self.__parses += [copy.deepcopy(parse_list)]
+                    self.__parses += copy.deepcopy(parse_list)
 
         returned_parses = copy.deepcopy(self.__parses)
         return returned_parses
@@ -122,7 +136,6 @@ class PolyCube:
 
 
 if __name__ == "__main__":
-
     poly1 = PolyCube(
         gu.get_adjacency_matrix_from_position_vector([(0, 0, 0), (0, 1, 0), (0, 2, 0), (0, 3, 0)]),
         [(0, 0, 0), (0, 1, 0), (0, 2, 0), (0, 3, 0)]

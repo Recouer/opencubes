@@ -3,6 +3,7 @@ import geometry_utils as gu
 from polycube import PolyCube
 from sorter import PolycubeSorter
 
+
 class PolycubeHolder:
     """
     the structure that holds the polycube depending on their tags
@@ -132,11 +133,38 @@ def test_PolycubeSorter_try_add_polycube_size4():
     print(sorter)
 
 
+def test():
+    listy = [[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (2, 0, 0)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)],
+             [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, -1)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, 1, 0)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, 1)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, 1, 0)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, -1)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, -1, 0)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, 1)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, -1, 0)],
+             [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, -1)]]
+
+    sorter = PolycubeSorter()
+    for coo in listy[1:3]:
+        polycube = PolyCube(gu.get_adjacency_matrix_from_position_vector(coo), coo)
+        sorter.try_add_polycube(polycube)
+
+    print(sorter)
+
 # endregion
 
 
 if __name__ == "__main__":
-    test_PolycubeSorter_try_add_polycube_size4()
+    test()
+    # test_PolycubeSorter_try_add_polycube_size4()
 
     # test_has_equivalence()
 

@@ -2,7 +2,7 @@ import numpy as np
 
 
 def get_adjacency_matrix_from_position_vector(position_vector: list[tuple[int, int, int]]):
-    adjacency_matrix = np.zeros((len(position_vector), len(position_vector)))
+    adjacency_matrix = np.zeros((len(position_vector), len(position_vector)), dtype=int)
     for node in range(len(position_vector)):
         for neighbor in range(node + 1, len(position_vector)):
             try:
