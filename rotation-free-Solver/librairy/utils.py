@@ -4,6 +4,8 @@ import numpy as np
 import geometry_utils as gu
 import numpy.typing as npt
 from collections import Counter
+import math
+import matplotlib.pyplot as plt
 
 
 def has_equivalence(connection: int, _parse: int, eq_list: dict):
@@ -89,3 +91,31 @@ def update_adjacency_matrix(adjacency_matrix, position_vector) -> None:
             adjacency_matrix[size - 1, i] = adj
 
 
+def render_shapes(shapes: list[np.ndarray], path: str):
+    n = len(shapes)
+    dim = max(max(a.shape) for a in shapes)
+    i = math.isqrt(n) + 1
+    voxel_dim = dim * i
+    voxel_array = np.zeros((voxel_dim + i, voxel_dim + i, dim), dtype=np.byte)
+    pad = 1
+    for idx, shape in enumerate(shapes):
+        x = (idx % i) * dim + (idx % i)
+        y = (idx // i) * dim + (idx // i)
+        xpad = x * pad
+        ypad = y * pad
+        s = shape.shape
+        voxel_array[x:x + s[0], y:y + s[1], 0: s[2]] = shape
+
+    # voxel_array = crop_cube(voxel_array)
+    colors = np.empty(voxel_array.shape, dtype=object)
+    colors[:] = '#FFD65DC0'
+
+    ax = plt.figure(figsize=(20, 16), dpi=600).add_subplot(projection='3d')
+    ax.voxels(voxel_array, facecolors=colors, edgecolor='k', linewidth=0.1)
+
+    ax.set_xlim([0, voxel_array.shape[0]])
+    ax.set_ylim([0, voxel_array.shape[1]])
+    ax.set_zlim([0, voxel_array.shape[2]])
+    plt.axis("off")
+    ax.set_box_aspect((1, 1, voxel_array.shape[2] / voxel_array.shape[0]))
+    plt.savefig(path + ".png", bbox_inches='tight', pad_inches=0)

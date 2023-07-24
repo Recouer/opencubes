@@ -4,10 +4,8 @@ from time import perf_counter
 import numpy as np
 from holder import PolycubeHolder
 from polycube import PolyCube
-from utils import identity_to_tag
+from utils import identity_to_tag, render_shapes
 import tracemalloc
-
-# sys.path.insert(1, "./rotation-free-Solver/librairy/")
 
 
 class CubeSolver:
@@ -24,7 +22,29 @@ class CubeSolver:
         initial_holder = PolycubeHolder("C0")
         initial_holder.add_polycube(PolyCube(np.array([[0]]), [(0, 0, 0)]))
 
-        self.polycube_per_number_of_cubes = {1: {"C0": initial_holder}}
+        self.polycube_per_number_of_cubes: dict[int, dict[str, PolycubeHolder]] = \
+            {1: {"C0": initial_holder}}
+
+    def render_shapes(self, output_file: str, number_of_cubes: int = 0, shapes: str = ""):
+        polycubes = []
+        if number_of_cubes == 0:
+            if shapes == "":
+                for _, by_number in self.polycube_per_number_of_cubes.items():
+                    for _, by_shape in by_number.items():
+                        polycubes += by_shape.polycubes
+        elif shapes == "":
+            for _, by_shape in self.polycube_per_number_of_cubes[number_of_cubes].items():
+                polycubes += by_shape.polycubes
+
+        else:
+            polycubes += self.polycube_per_number_of_cubes[number_of_cubes][shapes].polycubes
+
+        def mapping(polycube: PolyCube) -> np.ndarray:
+            pass
+
+        map(mapping, polycubes)
+
+        render_shapes(polycubes, output_file)
 
     def solve(self, cube_number: int):
         for i in range(1, cube_number):
@@ -49,6 +69,7 @@ if __name__ == "__main__":
 
     solver = CubeSolver()
     solver.solve(4)
+    solver.render_shapes("out.txt")
     print(solver)
 
     # Stop the timer
@@ -57,8 +78,8 @@ if __name__ == "__main__":
     print(f"Elapsed time: {round(t1_stop - t1_start, 3)}s")
     print(tracemalloc.get_traced_memory())
 
-    val = np.load("../tests/cubes_7.npy", allow_pickle=True)
-    print(len(val))
+    # val = np.load("../tests/cubes_7.npy", allow_pickle=True)
+    # print(len(val))
     tracemalloc.stop()
     # print(val)
 
