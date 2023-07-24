@@ -153,7 +153,7 @@ def test():
              [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, -1)]]
 
     sorter = PolycubeSorter()
-    for coo in listy[1:3]:
+    for coo in listy[9:11]:
         polycube = PolyCube(gu.get_adjacency_matrix_from_position_vector(coo), coo)
         sorter.try_add_polycube(polycube)
 

@@ -89,7 +89,8 @@ class PolycubeSorter:
     def __is_inside_rec(self, sorter: Sorter, polycube: PolyCube, current_node: int, traversed_list: list[bool],
                         current_parse: list, eq_list: dict[int, int],
                         final_eq_list: dict[int, int], depth: int = 0, max_depth: int = 0) -> bool:
-        print("###########")
+        print()
+        print("######################################################")
         sort_order = [1, 2, 4, 8, 16, 32]
         traversed_list[current_node] = True
         adjacencies = polycube.get_adjacencies(current_node)
@@ -233,8 +234,13 @@ class PolycubeSorter:
             self.starter_node = min(counter, key=counter.get)
 
             polycube_parses = [parses for parses in polycube.get_parses(self.starter_node)]
-            self.sorter.add_polycube(polycube, polycube_parses,
+            if polycube_parses:
+                self.sorter.add_polycube(polycube, polycube_parses[0],
                                      eq_dict={1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})
+            else:
+                self.sorter.add_polycube(polycube, [],
+                                     eq_dict={1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})
+
 
             return True
 
@@ -255,10 +261,9 @@ class PolycubeSorter:
                 is_inside = self.__is_inside_rec(self.sorter, polycube, cube,
                                                  [False for _ in range(len(polycube.adjacency_matrix))],
                                                  [], equivalence_list, new_eq_list, max_depth=max_depth)
-                if self.__is_inside_rec(self.sorter, polycube, cube,
-                                        [False for _ in range(len(polycube.adjacency_matrix))],
-                                        [], equivalence_list, new_eq_list, max_depth=max_depth):
+                if is_inside:
                     can_be_added = False
+                    print("!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!")
                     print(new_eq_list, is_inside)
 
                 if old_max_depth <= max_depth:

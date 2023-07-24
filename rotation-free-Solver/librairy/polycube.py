@@ -28,6 +28,8 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
             parse_list.append(adjacency)
             create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack, traversed_node)
             backtrack += 1
+    
+    print(parse_list)
 
 
 class PolyCube:
@@ -75,6 +77,7 @@ class PolyCube:
         parse_list = []
         create_parse_rec(self.adjacency_matrix, parse_list, cube, 0,
                          [False for _ in range(len(self.adjacency_matrix))])
+        print("using cube :", cube)
         return parse_list
 
     def get_parses(self, starter_nodes: int):
@@ -106,7 +109,7 @@ class PolyCube:
                 if isinstance(parse_list[len(parse_list) - 1], str):
                     parse_list.pop(len(parse_list) - 1)
                 if parse_list not in self.__parses:
-                    self.__parses += copy.deepcopy(parse_list)
+                    self.__parses += [copy.deepcopy(parse_list)]
 
         returned_parses = copy.deepcopy(self.__parses)
         return returned_parses
