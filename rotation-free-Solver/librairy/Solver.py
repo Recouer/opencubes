@@ -39,10 +39,8 @@ class CubeSolver:
         else:
             polycubes += self.polycube_per_number_of_cubes[number_of_cubes][shapes].polycubes
 
-        def mapping(polycube: PolyCube) -> np.ndarray:
-            return polycube.get_3D_representation()
-
         polycubes = [polycube.get_3D_representation() for polycube in polycubes]
+        print(polycubes)
 
         render_shapes(polycubes, output_file)
 
