@@ -18,7 +18,7 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
     adjacency_list = dict(
         [(adjacency, i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
     )
-# error with the backtracking values
+    # error with the backtracking values
     for adjacency in sort_order:
         if adjacency in adjacency_list.keys() and not traversed_node[adjacency_list[adjacency]]:
             if backtrack > 0:
@@ -27,11 +27,12 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
                 backtrack = 0
 
             parse_list.append(adjacency)
-            backtrack = create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack, traversed_node)
+            backtrack = create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack,
+                                         traversed_node)
             print("backtrack before:", backtrack)
             backtrack += 1
             print("adding one to backtrack ", backtrack)
-    
+
     print(parse_list)
     return backtrack
 
@@ -56,7 +57,7 @@ class PolyCube:
     def __repr__(self):
         # string = self.cube_identity.__repr__() + "\n"
         string = self.position_vector.__repr__() + "\n"
-        #string += self.adjacency_matrix.__repr__() + "\n"
+        # string += self.adjacency_matrix.__repr__() + "\n"
         return string
 
     def get_nodes_with_NAdjacencies(self, adjacencies: int):
@@ -76,6 +77,20 @@ class PolyCube:
         return dict(
             [(adjacency, i) for (i, adjacency) in enumerate(self.adjacency_matrix[node_index]) if adjacency != 0]
         )
+
+    def get_3D_representation(self) -> np.ndarray:
+        vector = np.array(self.position_vector)
+        dims = [max(vector[:, coordinates]) - min(vector[:, coordinates]) + 1
+                for coordinates in range(3)]
+        mins = [min(vector[:, coordinates]) for coordinates in range(3)]
+
+        threed_tensor = np.zeros(dims)
+        for cube in self.position_vector:
+            threed_tensor[cube[0] - mins[0],
+                          cube[1] - mins[1],
+                          cube[2] - mins[2]] = 1
+
+        return threed_tensor
 
     def get_parse_from_cube(self, cube: int):
         parse_list = []
@@ -151,5 +166,6 @@ if __name__ == "__main__":
     print(poly1.get_adjacencies(0))
     print(poly1.cube_identity)
     print(poly1.get_parses(2))
+    print(poly1.get_3D_representation())
 
     pass

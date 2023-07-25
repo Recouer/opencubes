@@ -40,9 +40,9 @@ class CubeSolver:
             polycubes += self.polycube_per_number_of_cubes[number_of_cubes][shapes].polycubes
 
         def mapping(polycube: PolyCube) -> np.ndarray:
-            pass
+            return polycube.get_3D_representation()
 
-        map(mapping, polycubes)
+        polycubes = [polycube.get_3D_representation() for polycube in polycubes]
 
         render_shapes(polycubes, output_file)
 
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     solver = CubeSolver()
     solver.solve(4)
-    solver.render_shapes("out.txt")
+    solver.render_shapes("out", 4)
     print(solver)
 
     # Stop the timer
