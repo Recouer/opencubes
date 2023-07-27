@@ -66,8 +66,8 @@ if __name__ == "__main__":
     t1_start = perf_counter()
 
     solver = CubeSolver()
-    solver.solve(4)
-    solver.render_shapes("out", 4)
+    solver.solve(5)
+    solver.render_shapes("out", 5)
     print(solver)
 
     # Stop the timer

@@ -22,18 +22,13 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
     for adjacency in sort_order:
         if adjacency in adjacency_list.keys() and not traversed_node[adjacency_list[adjacency]]:
             if backtrack > 0:
-                print("append to parse:", backtrack)
                 parse_list.append(f"BT:{backtrack}")
                 backtrack = 0
 
             parse_list.append(adjacency)
             backtrack = create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack,
                                          traversed_node)
-            print("backtrack before:", backtrack)
             backtrack += 1
-            print("adding one to backtrack ", backtrack)
-
-    print(parse_list)
     return backtrack
 
 

@@ -1,0 +1,5700 @@
+{}
+adding polycube
+1
+{}
+adding polycube
+parse:  1
+
+
+{1: [(0, 0, 0), (0, 1, 0)]
+}
+[(0, 0, 0), (1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [0 2] 0
+0 {2: 1} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 2] 0
+possible child :  [1]
+get adjacencies:  [0 2] 0
+(2, 1) 0 1 False
+no equivalence
+get adjacencies:  [0 2] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0] 1
+1 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+traversed all
+-1 
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0} True
+
+
+{1: [(0, 0, 0), (0, 1, 0)]
+}
+[(0, 0, 0), (0, 0, 1)]
+
+
+######################################################
+get adjacencies:  [0 4] 0
+0 {4: 1} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 4] 0
+possible child :  [1]
+get adjacencies:  [0 4] 0
+(4, 1) 0 1 False
+no equivalence
+get adjacencies:  [0 4] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  4 1
+new eq list :  {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+
+######################################################
+get adjacencies:  [32  0] 1
+1 {32: 0} {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+traversed all
+-1 
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8} True
+
+
+{1: [(0, 0, 0), (0, 1, 0)]
+}
+[(0, 0, 0), (0, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 8] 0
+0 {8: 1} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 8] 0
+possible child :  [1]
+get adjacencies:  [0 8] 0
+(8, 1) 0 1 False
+no equivalence
+get adjacencies:  [0 8] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0] 1
+1 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+traversed all
+-1 
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0} True
+
+
+{1: [(0, 0, 0), (0, 1, 0)]
+}
+[(0, 0, 0), (-1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [ 0 16] 0
+0 {16: 1} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0 16] 0
+possible child :  [1]
+get adjacencies:  [ 0 16] 0
+(16, 1) 0 1 False
+no equivalence
+get adjacencies:  [ 0 16] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  16 1
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+
+######################################################
+get adjacencies:  [2 0] 1
+1 {2: 0} {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+traversed all
+-1 
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0} True
+
+
+{1: [(0, 0, 0), (0, 1, 0)]
+}
+[(0, 0, 0), (0, 0, -1)]
+
+
+######################################################
+get adjacencies:  [ 0 32] 0
+0 {32: 1} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0 32] 0
+possible child :  [1]
+get adjacencies:  [ 0 32] 0
+(32, 1) 0 1 False
+no equivalence
+get adjacencies:  [ 0 32] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  32 1
+new eq list :  {1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1}
+
+######################################################
+get adjacencies:  [4 0] 1
+1 {4: 0} {1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1}
+traversed all
+-1 
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1} True
+2
+{}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  2
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, 0, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 4] 0
+0 {1: 1, 4: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 4] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 4] 0
+(1, 1) 0 1 False
+no equivalence
+(4, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 4] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 4] 0
+0 {1: 1, 4: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 4] 0
+possible child :  [2]
+get adjacencies:  [0 1 4] 0
+(1, 1) 1 2 True
+no equivalence
+(4, 2) 0 2 False
+no equivalence
+get adjacencies:  [0 1 4] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  4 2
+new eq list :  {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+
+######################################################
+get adjacencies:  [32  0  0] 2
+2 {32: 0} {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+dict_items([(1, 0)])
+[True, False, True]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+})
+backtrack_node: 2  1
+[1, 'BT:1', 1] 1
+test 2 1
+get adjacencies:  [1 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1', 1, 'BT:1']
+current node : 0
+2 2
+continuing forward
+get adjacencies:  [0 1 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+using cube : 0
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+}}}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  8
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (-1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [ 0  1 16] 0
+0 {1: 1, 16: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1 16] 0
+possible child :  [1, 1]
+get adjacencies:  [ 0  1 16] 0
+(1, 1) 0 1 False
+no equivalence
+(16, 2) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1 16] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1 16] 0
+0 {1: 1, 16: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1 16] 0
+get adjacencies:  [ 0  1 16] 0
+possible child :  [2, 8]
+get adjacencies:  [ 0  1 16] 0
+(1, 1) 1 2 True
+no equivalence
+(16, 2) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1 16] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [2 0 0] 2
+2 {2: 0} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, 0, -1)]
+
+
+######################################################
+get adjacencies:  [ 0  1 32] 0
+0 {1: 1, 32: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1 32] 0
+possible child :  [1, 1]
+get adjacencies:  [ 0  1 32] 0
+(1, 1) 0 1 False
+no equivalence
+(32, 2) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1 32] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1 32] 0
+0 {1: 1, 32: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1 32] 0
+get adjacencies:  [ 0  1 32] 0
+possible child :  [2, 8]
+get adjacencies:  [ 0  1 32] 0
+(1, 1) 1 2 True
+no equivalence
+(32, 2) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1 32] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  32 2
+new eq list :  {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+
+######################################################
+get adjacencies:  [4 0 0] 2
+2 {4: 0} {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, 2, 0)]
+
+
+######################################################
+get adjacencies:  [8 0 1] 1
+1 {8: 0, 1: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 0
+continuing forward
+get adjacencies:  [8 0 1] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 1] 1
+(8, 0) 0 1 False
+no equivalence
+(1, 2) 0 1 False
+no equivalence
+get adjacencies:  [8 0 1] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 0] 0
+0 {1: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+dict_items([(1, 1)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 0  1
+[1] 1
+test 0 1
+get adjacencies:  [0 1 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 1] 1
+1 {8: 0, 1: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 1
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 1] 1
+get adjacencies:  [8 0 1] 1
+possible child :  [8]
+get adjacencies:  [8 0 1] 1
+(8, 0) 1 8 True
+no equivalence
+(1, 2) 8 8 False
+get adjacencies:  [8 0 1] 1
+8
+
+######################################################
+get adjacencies:  [0 8 0] 2
+2 {8: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 8 
+[1, 'BT:1', 8]
+current node : 2
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [8 0 2] 1
+1 {8: 0, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 0
+continuing forward
+get adjacencies:  [8 0 2] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 2] 1
+(8, 0) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [8 0 2] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 0] 0
+0 {1: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+dict_items([(1, 1)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 0  1
+[1] 1
+test 0 1
+get adjacencies:  [0 1 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 2] 1
+1 {8: 0, 2: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 1
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 2] 1
+get adjacencies:  [8 0 2] 1
+possible child :  [2, 8]
+get adjacencies:  [8 0 2] 1
+(8, 0) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+get adjacencies:  [8 0 2] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [ 0 16  0] 2
+2 {16: 1} {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, 1, 1)]
+
+
+######################################################
+get adjacencies:  [8 0 4] 1
+1 {8: 0, 4: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 0
+continuing forward
+get adjacencies:  [8 0 4] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 4] 1
+(8, 0) 0 1 False
+no equivalence
+(4, 2) 0 1 False
+no equivalence
+get adjacencies:  [8 0 4] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 0] 0
+0 {1: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+dict_items([(1, 1)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 0  1
+[1] 1
+test 0 1
+get adjacencies:  [0 1 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 4] 1
+1 {8: 0, 4: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 1
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 4] 1
+get adjacencies:  [8 0 4] 1
+possible child :  [2, 8]
+get adjacencies:  [8 0 4] 1
+(8, 0) 1 2 True
+no equivalence
+(4, 2) 0 2 False
+no equivalence
+get adjacencies:  [8 0 4] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  4 2
+new eq list :  {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+
+######################################################
+get adjacencies:  [ 0 32  0] 2
+2 {32: 1} {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (-1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [ 8  0 16] 1
+1 {8: 0, 16: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 0
+continuing forward
+get adjacencies:  [ 8  0 16] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0 16] 1
+(8, 0) 0 1 False
+no equivalence
+(16, 2) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0 16] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 0] 0
+0 {1: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+dict_items([(1, 1)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 0  1
+[1] 1
+test 0 1
+get adjacencies:  [0 1 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [ 8  0 16] 1
+1 {8: 0, 16: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 1
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0 16] 1
+get adjacencies:  [ 8  0 16] 1
+possible child :  [2, 8]
+get adjacencies:  [ 8  0 16] 1
+(8, 0) 1 2 True
+no equivalence
+(16, 2) 0 2 False
+no equivalence
+get adjacencies:  [ 8  0 16] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [0 2 0] 2
+2 {2: 1} {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0} True
+
+
+{1: {'BT:1': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (0, 1, -1)]
+
+
+######################################################
+get adjacencies:  [ 8  0 32] 1
+1 {8: 0, 32: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 0
+continuing forward
+get adjacencies:  [ 8  0 32] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0 32] 1
+(8, 0) 0 1 False
+no equivalence
+(32, 2) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0 32] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 0] 0
+0 {1: 1} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 0
+1 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+dict_items([(1, 1)])
+[True, True, False]
+backtracking
+('BT:1', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+})
+backtrack_node: 0  1
+[1] 1
+test 0 1
+get adjacencies:  [0 1 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [ 8  0 32] 1
+1 {8: 0, 32: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 1
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0 32] 1
+get adjacencies:  [ 8  0 32] 1
+possible child :  [2, 8]
+get adjacencies:  [ 8  0 32] 1
+(8, 0) 1 2 True
+no equivalence
+(32, 2) 0 2 False
+no equivalence
+get adjacencies:  [ 8  0 32] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  32 2
+new eq list :  {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+
+######################################################
+get adjacencies:  [0 4 0] 2
+2 {4: 1} {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2} True
+3
+{}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  2
+parse:  BT:1
+parse:  4
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [0 1 2 8] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+(8, 3) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 8] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  [2]
+get adjacencies:  [0 1 2 8] 0
+(1, 1) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+(8, 3) 8 2 False
+no equivalence
+get adjacencies:  [0 1 2 8] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+dict_items([(16, 0)])
+[True, True, True, False]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+})
+backtrack_node: 2  1
+[1, 'BT:1', 2] 2
+test 2 2
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 2, 'BT:1', 1]
+current node : 2
+1 4
+dict_items([(16, 0)])
+[True, False, True, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+}}})
+backtrack_node: 2  1
+[1, 'BT:1', 2, 'BT:1', 1] 1
+test 2 1
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1']
+current node : 0
+2 4
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  [2, 2]
+get adjacencies:  [0 1 2 8] 0
+(1, 1) 0 2 False
+no equivalence
+(2, 2) 1 2 True
+no equivalence
+(8, 3) 0 2 False
+no equivalence
+get adjacencies:  [0 1 2 8] 0
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  1 2
+new eq list :  {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2]
+current node : 1
+3 4
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+})
+backtrack_node: 1  1
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2] 2
+test 1 2
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 4
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  8 2
+new eq list :  {1: 16, 2: 1, 4: 0, 8: 2, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 3
+3 {1: 0} {1: 16, 2: 1, 4: 0, 8: 2, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2]
+current node : 3
+3 4
+dict_items([(1, 0)])
+[True, False, True, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [1 0 0 0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 16, 2: 1, 4: 0, 8: 2, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1']
+current node : 0
+4 4
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 3
+3 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1]
+current node : 3
+1 4
+dict_items([(1, 0)])
+[True, False, False, True]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+}}})
+backtrack_node: 3  1
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1] 1
+test 3 1
+get adjacencies:  [1 0 0 0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1']
+current node : 0
+2 4
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  [2]
+get adjacencies:  [0 1 2 8] 0
+(1, 1) 8 2 False
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+(8, 3) 1 2 True
+no equivalence
+get adjacencies:  [0 1 2 8] 0
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2]
+current node : 2
+3 4
+dict_items([(16, 0)])
+[True, False, True, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+})
+backtrack_node: 2  1
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2] 2
+test 2 2
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 8] 0
+0 {1: 1, 2: 2, 8: 3} {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 4
+continuing forward
+get adjacencies:  [0 1 2 8] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 4
+{} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+using cube : 0
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+}}}}}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  2
+parse:  BT:1
+parse:  8
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [ 0  1  2 16] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1  2 16] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  [2, 2]
+get adjacencies:  [ 0  1  2 16] 0
+(1, 1) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+(16, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1  2 16] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+dict_items([(16, 0)])
+[True, True, True, False]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 2  1
+[1, 'BT:1', 2] 2
+test 2 2
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [2 0 0 0] 3
+3 {2: 0} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2, 'BT:1', 2]
+current node : 3
+3 4
+dict_items([(2, 0)])
+[True, True, False, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [2 0 0 0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1']
+current node : 0
+4 4
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1]
+current node : 2
+1 4
+dict_items([(16, 0)])
+[True, False, True, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 2  1
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1] 1
+test 2 1
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1']
+current node : 0
+2 4
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  [2]
+get adjacencies:  [ 0  1  2 16] 0
+(1, 1) 0 2 False
+no equivalence
+(2, 2) 1 2 True
+no equivalence
+(16, 3) 8 2 False
+no equivalence
+get adjacencies:  [ 0  1  2 16] 0
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  1 2
+new eq list :  {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2]
+current node : 1
+3 4
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 1  1
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2] 2
+test 1 2
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 16] 0
+0 {1: 1, 2: 2, 16: 3} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 4
+continuing forward
+get adjacencies:  [ 0  1  2 16] 0
+get adjacencies:  [ 0  1  2 16] 0
+possible child :  [8]
+get adjacencies:  [ 0  1  2 16] 0
+(1, 1) 2 8 True
+no equivalence
+(2, 2) 1 8 True
+no equivalence
+(16, 3) 8 8 False
+get adjacencies:  [ 0  1  2 16] 0
+8
+
+######################################################
+get adjacencies:  [2 0 0 0] 3
+3 {2: 0} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 BT:1 2 BT:1 8 
+[1, 'BT:1', 2, 'BT:1', 2, 'BT:1', 1, 'BT:1', 2, 'BT:1', 8]
+current node : 3
+5 4
+5 {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0} True
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, -1)]
+
+
+######################################################
+get adjacencies:  [ 0  1  2 32] 0
+0 {1: 1, 2: 2, 32: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1  2 32] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [ 0  1  2 32] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1  2 32] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 32] 0
+0 {1: 1, 2: 2, 32: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  2 32] 0
+possible child :  [2, 2]
+get adjacencies:  [ 0  1  2 32] 0
+(1, 1) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+(32, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1  2 32] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+dict_items([(16, 0)])
+[True, True, True, False]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 2  1
+[1, 'BT:1', 2] 2
+test 2 2
+get adjacencies:  [16  0  0  0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  2 32] 0
+0 {1: 1, 2: 2, 32: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  2 32] 0
+get adjacencies:  [ 0  1  2 32] 0
+possible child :  [4, 8]
+get adjacencies:  [ 0  1  2 32] 0
+(1, 1) 1 4 True
+no equivalence
+(2, 2) 2 4 True
+no equivalence
+(32, 3) 0 4 False
+no equivalence
+get adjacencies:  [ 0  1  2 32] 0
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+has equivalence:  32 4
+new eq list :  {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+
+######################################################
+get adjacencies:  [4 0 0 0] 3
+3 {4: 0} {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+trace :-1 1 BT:1 2 BT:1 4 
+[1, 'BT:1', 2, 'BT:1', 4]
+current node : 3
+5 4
+5 {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4} True
+{}
+adding polycube
+parse:  1
+parse:  1
+parse:  BT:2
+parse:  2
+{}
+adding polycube
+parse:  1
+parse:  2
+parse:  8
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 4] 1
+1 {8: 0, 4: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 4] 1
+possible child :  [1]
+get adjacencies:  [8 0 0 4] 1
+(8, 0) 8 1 True
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 4] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  4 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(16, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+0 1
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+
+
+######################################################
+get adjacencies:  [8 0 0 4] 1
+1 {8: 0, 4: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 1
+continuing forward
+get adjacencies:  [8 0 0 4] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 0 4] 1
+(8, 0) 0 1 False
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 4] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 1
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 8 1 True
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  4 1
+new eq list :  {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+
+######################################################
+get adjacencies:  [ 0 32  0  0] 3
+3 {32: 1} {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+trace :-1 1 
+[1, 1]
+current node : 3
+1 1
+dict_items([(32, 1)])
+[False, True, False, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+1 1
+{1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}}}
+adding polycube
+parse:  1
+parse:  4
+parse:  BT:2
+parse:  2
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 8  0  0 16] 1
+1 {8: 0, 16: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 16] 1
+get adjacencies:  [ 8  0  0 16] 1
+possible child :  [1, 4]
+get adjacencies:  [ 8  0  0 16] 1
+(8, 0) 8 1 True
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 16] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(16, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+0 1
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [ 8  0  0 16] 1
+1 {8: 0, 16: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 1
+continuing forward
+get adjacencies:  [ 8  0  0 16] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0  0 16] 1
+(8, 0) 0 1 False
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 16] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 1
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 4]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 8 1 True
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  16 1
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+
+######################################################
+get adjacencies:  [0 2 0 0] 3
+3 {2: 1} {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 3
+1 1
+dict_items([(2, 1)])
+[False, True, False, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+1 1
+{1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}}}
+adding polycube
+parse:  1
+parse:  16
+parse:  BT:2
+parse:  2
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 8  0  0 32] 1
+1 {8: 0, 32: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+possible child :  [1, 4, 16]
+get adjacencies:  [ 8  0  0 32] 1
+(8, 0) 8 1 True
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 32] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  32 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 2
+2 {16: 0} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(16, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+0 1
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+
+
+######################################################
+get adjacencies:  [ 8  0  0 32] 1
+1 {8: 0, 32: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 1
+continuing forward
+get adjacencies:  [ 8  0  0 32] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0  0 32] 1
+(8, 0) 0 1 False
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 32] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 1
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 4, 16]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 8 1 True
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  32 1
+new eq list :  {1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1}
+
+######################################################
+get adjacencies:  [0 4 0 0] 3
+3 {4: 1} {1: 0, 2: 0, 4: 8, 8: 0, 16: 0, 32: 1}
+trace :-1 1 
+[1, 1]
+current node : 3
+1 1
+dict_items([(4, 1)])
+[False, True, False, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+1 1
+{1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}}}
+adding polycube
+parse:  1
+parse:  32
+parse:  BT:2
+parse:  2
+
+
+{1: {2: {8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 0)]
+}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 2] 1
+1 {8: 0, 2: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 2] 1
+possible child :  [2]
+get adjacencies:  [8 0 0 2] 1
+(8, 0) 8 2 True
+no equivalence
+(2, 3) 0 2 False
+no equivalence
+get adjacencies:  [8 0 0 2] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [ 0 16  8  0] 3
+3 {16: 1, 8: 2} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 2 
+[1, 2]
+current node : 3
+2 1
+2 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [ 0 16  8  0] 3
+possible child :  [8]
+get adjacencies:  [ 0 16  8  0] 3
+(16, 1) 16 8 True
+no equivalence
+(8, 2) 8 8 False
+get adjacencies:  [ 0 16  8  0] 3
+8
+
+######################################################
+get adjacencies:  [16  0  0  1] 2
+2 {16: 0, 1: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 2 8 
+[1, 2, 8]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (2, 0, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  2] 2
+2 {16: 0, 2: 3} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+continuing forward
+get adjacencies:  [16  0  0  2] 2
+get adjacencies:  [16  0  0  2] 2
+get adjacencies:  [16  0  0  2] 2
+get adjacencies:  [16  0  0  2] 2
+possible child :  [1]
+get adjacencies:  [16  0  0  2] 2
+(16, 0) 8 1 True
+no equivalence
+(2, 3) 1 1 False
+get adjacencies:  [16  0  0  2] 2
+1
+
+######################################################
+get adjacencies:  [ 0  0 16  0] 3
+3 {16: 2} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 1 
+[1, 1, 1]
+current node : 3
+2 1
+2 {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+dict_items([(16, 2)])
+[True, False, True, True]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+})
+backtrack_node: 3  2
+[1, 1, 1] 1
+test 3 1
+get adjacencies:  [ 0  0 16  0] 3
+backtrack_node: 2
+[1, 1, 1] 1
+test 2 1
+get adjacencies:  [16  0  0  2] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 1, 'BT:1']
+current node : 0
+3 2
+3 {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [2]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 2 False
+no equivalence
+(2, 2) 1 2 True
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  1 2
+new eq list :  {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+trace :-1 1 1 BT:2 2 
+[1, 1, 1, 'BT:1', 2]
+current node : 1
+4 3
+4 {1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 2, 2: 1, 4: 0, 8: 16, 16: 8, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  4] 2
+2 {16: 0, 4: 3} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+continuing forward
+get adjacencies:  [16  0  0  4] 2
+get adjacencies:  [16  0  0  4] 2
+get adjacencies:  [16  0  0  4] 2
+get adjacencies:  [16  0  0  4] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [16  0  0  4] 2
+(16, 0) 8 1 True
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [16  0  0  4] 2
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  4 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 1
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+
+
+######################################################
+get adjacencies:  [16  0  0  4] 2
+2 {16: 0, 4: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 1
+continuing forward
+get adjacencies:  [16  0  0  4] 2
+possible child :  [1, 1]
+get adjacencies:  [16  0  0  4] 2
+(16, 0) 0 1 False
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [16  0  0  4] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  16 1
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 1
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 8 1 True
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+has equivalence:  1 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  4 1
+new eq list :  {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+
+######################################################
+get adjacencies:  [ 0  0 32  0] 3
+3 {32: 2} {1: 0, 2: 0, 4: 1, 8: 0, 16: 0, 32: 8}
+trace :-1 1 
+[1, 1]
+current node : 3
+1 1
+dict_items([(32, 2)])
+[False, False, True, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+finished looking
+returned from adding eq False
+
+finished looking
+1 1
+{1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}}}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  2
+parse:  4
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [2]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  8] 2
+2 {16: 0, 8: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [16  0  0  8] 2
+possible child :  []
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  2 1
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  8] 2
+2 {16: 0, 8: 3} {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 2, 1]
+current node : 2
+1 3
+continuing forward
+get adjacencies:  [16  0  0  8] 2
+get adjacencies:  [16  0  0  8] 2
+get adjacencies:  [16  0  0  8] 2
+get adjacencies:  [16  0  0  8] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [16  0  0  8] 2
+(16, 0) 8 1 True
+no equivalence
+(8, 3) 0 1 False
+no equivalence
+get adjacencies:  [16  0  0  8] 2
+new eq list :  {1: 0, 2: 1, 4: 0, 8: 0, 16: 8, 32: 0}
+has equivalence:  8 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 3
+{} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [16  0  0  8] 2
+2 {16: 0, 8: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 3
+continuing forward
+get adjacencies:  [16  0  0  8] 2
+possible child :  [1, 1]
+get adjacencies:  [16  0  0  8] 2
+(16, 0) 0 1 False
+no equivalence
+(8, 3) 0 1 False
+no equivalence
+get adjacencies:  [16  0  0  8] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  16 1
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 3
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 8 1 True
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 8, 4: 0, 8: 0, 16: 1, 32: 0}
+has equivalence:  1 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 0 1 0] 3
+3 {1: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 3
+1 3
+dict_items([(1, 2)])
+[False, False, True, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+}})
+backtrack_node: 3  1
+[1, 1] 1
+test 3 1
+get adjacencies:  [0 0 1 0] 3
+backtrack_node: 2
+
+######################################################
+get adjacencies:  [16  0  0  8] 2
+2 {16: 0, 8: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1']
+current node : 2
+2 3
+continuing forward
+get adjacencies:  [16  0  0  8] 2
+possible child :  [2]
+get adjacencies:  [16  0  0  8] 2
+(16, 0) 0 2 False
+no equivalence
+(8, 3) 1 2 True
+no equivalence
+get adjacencies:  [16  0  0  8] 2
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 1, 'BT:1', 2]
+current node : 0
+3 3
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  []
+returned from adding eq False
+
+finished looking
+False
+finished looking
+returned from adding eq False
+
+finished looking
+3 3
+{1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+}}}}
+adding polycube
+parse:  1
+parse:  BT:1
+parse:  2
+parse:  8
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, -1)]
+
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 0 1 False
+no equivalence
+(2, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 2 0] 0
+0 {1: 1, 2: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 2 0] 0
+possible child :  [2]
+get adjacencies:  [0 1 2 0] 0
+(1, 1) 1 2 True
+no equivalence
+(2, 2) 0 2 False
+no equivalence
+get adjacencies:  [0 1 2 0] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0 32] 2
+2 {16: 0, 32: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 2
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [16  0  0 32] 2
+get adjacencies:  [16  0  0 32] 2
+possible child :  [4, 8]
+get adjacencies:  [16  0  0 32] 2
+(16, 0) 16 4 True
+no equivalence
+(32, 3) 0 4 False
+no equivalence
+get adjacencies:  [16  0  0 32] 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+has equivalence:  32 4
+new eq list :  {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+
+######################################################
+get adjacencies:  [0 0 4 0] 3
+3 {4: 2} {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+trace :-1 1 BT:1 2 4 
+[1, 'BT:1', 2, 4]
+current node : 3
+4 3
+4 {1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4}
+traversed all
+-1 
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 2, 4: 32, 8: 8, 16: 16, 32: 4} True
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 2] 0
+0 {1: 1, 8: 2, 2: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 2] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [0 1 8 2] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+(2, 3) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 2] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 2] 0
+0 {1: 1, 8: 2, 2: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 2] 0
+possible child :  [2]
+get adjacencies:  [0 1 8 2] 0
+(1, 1) 1 2 True
+no equivalence
+(8, 2) 8 2 False
+no equivalence
+(2, 3) 0 2 False
+no equivalence
+get adjacencies:  [0 1 8 2] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [16  0  0  0] 3
+3 {16: 0} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 3
+3 2
+3 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+dict_items([(16, 0)])
+[True, True, False, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [16  0  0  0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 2] 0
+0 {1: 1, 8: 2, 2: 3} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 2] 0
+get adjacencies:  [0 1 8 2] 0
+possible child :  [8]
+get adjacencies:  [0 1 8 2] 0
+(1, 1) 1 8 True
+no equivalence
+(8, 2) 8 8 False
+get adjacencies:  [0 1 8 2] 0
+8
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 BT:1 2 BT:1 8 
+[1, 'BT:1', 2, 'BT:1', 8]
+current node : 2
+5 4
+5 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0} True
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 8 4] 0
+0 {1: 1, 8: 2, 4: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 4] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [0 1 8 4] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 4] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 4] 0
+0 {1: 1, 8: 2, 4: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 4] 0
+possible child :  [2]
+get adjacencies:  [0 1 8 4] 0
+(1, 1) 1 2 True
+no equivalence
+(8, 2) 8 2 False
+no equivalence
+(4, 3) 0 2 False
+no equivalence
+get adjacencies:  [0 1 8 4] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  4 2
+new eq list :  {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+
+######################################################
+get adjacencies:  [32  0  0  0] 3
+3 {32: 0} {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 3
+3 2
+3 {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+dict_items([(32, 0)])
+[True, True, False, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [32  0  0  0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 4] 0
+0 {1: 1, 8: 2, 4: 3} {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+continuing forward
+get adjacencies:  [0 1 8 4] 0
+get adjacencies:  [0 1 8 4] 0
+possible child :  [8]
+get adjacencies:  [0 1 8 4] 0
+(1, 1) 1 8 True
+no equivalence
+(8, 2) 8 8 False
+get adjacencies:  [0 1 8 4] 0
+8
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+trace :-1 1 BT:1 2 BT:1 8 
+[1, 'BT:1', 2, 'BT:1', 8]
+current node : 2
+5 4
+5 {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16} True
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, 0, 0)]
+
+
+######################################################
+get adjacencies:  [ 0  1  8 16] 0
+0 {1: 1, 8: 2, 16: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1  8 16] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [ 0  1  8 16] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1  8 16] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  8 16] 0
+0 {1: 1, 8: 2, 16: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  8 16] 0
+possible child :  [2]
+get adjacencies:  [ 0  1  8 16] 0
+(1, 1) 1 2 True
+no equivalence
+(8, 2) 8 2 False
+no equivalence
+(16, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1  8 16] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [2 0 0 0] 3
+3 {2: 0} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 3
+3 2
+3 {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+dict_items([(2, 0)])
+[True, True, False, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [2 0 0 0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  8 16] 0
+0 {1: 1, 8: 2, 16: 3} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  8 16] 0
+get adjacencies:  [ 0  1  8 16] 0
+possible child :  [8]
+get adjacencies:  [ 0  1  8 16] 0
+(1, 1) 1 8 True
+no equivalence
+(8, 2) 8 8 False
+get adjacencies:  [ 0  1  8 16] 0
+8
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 BT:1 2 BT:1 8 
+[1, 'BT:1', 2, 'BT:1', 8]
+current node : 2
+5 4
+5 {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0} True
+
+
+{1: {'BT:1': {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, -1)]
+
+
+######################################################
+get adjacencies:  [ 0  1  8 32] 0
+0 {1: 1, 8: 2, 32: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [ 0  1  8 32] 0
+possible child :  [1, 1, 1]
+get adjacencies:  [ 0  1  8 32] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 0  1  8 32] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+('BT:1', {2: {'BT:1': {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+}}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  8 32] 0
+0 {1: 1, 8: 2, 32: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 0  1  8 32] 0
+possible child :  [2]
+get adjacencies:  [ 0  1  8 32] 0
+(1, 1) 1 2 True
+no equivalence
+(8, 2) 8 2 False
+no equivalence
+(32, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 0  1  8 32] 0
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  32 2
+new eq list :  {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+
+######################################################
+get adjacencies:  [4 0 0 0] 3
+3 {4: 0} {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+trace :-1 1 BT:1 2 
+[1, 'BT:1', 2]
+current node : 3
+3 2
+3 {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+dict_items([(4, 0)])
+[True, True, False, True]
+backtracking
+('BT:1', {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+})
+backtrack_node: 3  1
+[1, 'BT:1', 2] 2
+test 3 2
+get adjacencies:  [4 0 0 0] 3
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [ 0  1  8 32] 0
+0 {1: 1, 8: 2, 32: 3} {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+trace :-1 1 BT:1 2 BT:1 
+[1, 'BT:1', 2, 'BT:1']
+current node : 0
+4 3
+4 {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+continuing forward
+get adjacencies:  [ 0  1  8 32] 0
+get adjacencies:  [ 0  1  8 32] 0
+possible child :  [8]
+get adjacencies:  [ 0  1  8 32] 0
+(1, 1) 1 8 True
+no equivalence
+(8, 2) 8 8 False
+get adjacencies:  [ 0  1  8 32] 0
+8
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+trace :-1 1 BT:1 2 BT:1 8 
+[1, 'BT:1', 2, 'BT:1', 8]
+current node : 2
+5 4
+5 {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 1] 1
+1 {8: 0, 1: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 1] 1
+get adjacencies:  [8 0 0 1] 1
+get adjacencies:  [8 0 0 1] 1
+get adjacencies:  [8 0 0 1] 1
+possible child :  [1]
+get adjacencies:  [8 0 0 1] 1
+(8, 0) 8 1 True
+no equivalence
+(1, 3) 1 1 False
+get adjacencies:  [8 0 0 1] 1
+1
+
+######################################################
+get adjacencies:  [0 8 0 0] 3
+3 {8: 1} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 3
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 1)])
+[True, True, False, True]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+})
+backtrack_node: 3  2
+[1, 1] 1
+test 3 1
+get adjacencies:  [0 8 0 0] 3
+backtrack_node: 1
+[1, 1] 1
+test 1 1
+get adjacencies:  [8 0 0 1] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 0
+3 2
+3 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1, 'BT:1', 1]
+current node : 2
+1 3
+dict_items([(1, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 2  1
+[1, 1, 'BT:1', 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1', 1, 'BT:1']
+current node : 0
+2 3
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 3
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+
+
+######################################################
+get adjacencies:  [8 0 0 1] 1
+1 {8: 0, 1: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 3
+continuing forward
+get adjacencies:  [8 0 0 1] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 0 1] 1
+(8, 0) 0 1 False
+no equivalence
+(1, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 1] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 3
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 1 True
+no equivalence
+(8, 2) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 2
+2 3
+dict_items([(1, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+})
+backtrack_node: 2  2
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 0 1] 1
+1 {8: 0, 1: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 1
+3 3
+continuing forward
+get adjacencies:  [8 0 0 1] 1
+possible child :  []
+False
+finished looking
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 8 0 0] 3
+3 {8: 1} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1, 'BT:1', 1]
+current node : 3
+1 3
+dict_items([(8, 1)])
+[False, True, False, True]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 3  1
+[1, 1, 'BT:1', 1] 1
+test 3 1
+get adjacencies:  [0 8 0 0] 3
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 0 1] 1
+1 {8: 0, 1: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1', 1, 'BT:1']
+current node : 1
+2 3
+continuing forward
+get adjacencies:  [8 0 0 1] 1
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+3 3
+{1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+using cube : 0
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+adding polycube
+parse:  1
+parse:  1
+parse:  BT:2
+parse:  8
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 2] 1
+1 {8: 0, 2: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 2] 1
+get adjacencies:  [8 0 0 2] 1
+get adjacencies:  [8 0 0 2] 1
+get adjacencies:  [8 0 0 2] 1
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [8 0 0 2] 1
+(8, 0) 8 1 True
+no equivalence
+(2, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 2] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(1, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 2  1
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1']
+current node : 0
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [8 0 0 2] 1
+1 {8: 0, 2: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 2
+continuing forward
+get adjacencies:  [8 0 0 2] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 0 2] 1
+(8, 0) 0 1 False
+no equivalence
+(2, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 2] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 1 True
+no equivalence
+(8, 2) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 2
+2 2
+dict_items([(1, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 2  2
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 0 2] 1
+1 {8: 0, 2: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 1
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 2] 1
+get adjacencies:  [8 0 0 2] 1
+possible child :  [2, 8]
+get adjacencies:  [8 0 0 2] 1
+(8, 0) 1 2 True
+no equivalence
+(2, 3) 0 2 False
+no equivalence
+get adjacencies:  [8 0 0 2] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [ 0 16  0  0] 3
+3 {16: 1} {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 2, 4: 0, 8: 1, 16: 16, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 4] 1
+1 {8: 0, 4: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 4] 1
+get adjacencies:  [8 0 0 4] 1
+get adjacencies:  [8 0 0 4] 1
+get adjacencies:  [8 0 0 4] 1
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [8 0 0 4] 1
+(8, 0) 8 1 True
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 4] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  4 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(1, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 2  1
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1']
+current node : 0
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, 1)]
+
+
+######################################################
+get adjacencies:  [8 0 0 4] 1
+1 {8: 0, 4: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 2
+continuing forward
+get adjacencies:  [8 0 0 4] 1
+possible child :  [1, 1]
+get adjacencies:  [8 0 0 4] 1
+(8, 0) 0 1 False
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [8 0 0 4] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 1 True
+no equivalence
+(8, 2) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 2
+2 2
+dict_items([(1, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 2  2
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [8 0 0 4] 1
+1 {8: 0, 4: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 1
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [8 0 0 4] 1
+get adjacencies:  [8 0 0 4] 1
+possible child :  [2, 8]
+get adjacencies:  [8 0 0 4] 1
+(8, 0) 1 2 True
+no equivalence
+(4, 3) 0 2 False
+no equivalence
+get adjacencies:  [8 0 0 4] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  4 2
+new eq list :  {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+
+######################################################
+get adjacencies:  [ 0 32  0  0] 3
+3 {32: 1} {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 2, 8: 1, 16: 0, 32: 16} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 8  0  0 16] 1
+1 {8: 0, 16: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 16] 1
+get adjacencies:  [ 8  0  0 16] 1
+get adjacencies:  [ 8  0  0 16] 1
+get adjacencies:  [ 8  0  0 16] 1
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [ 8  0  0 16] 1
+(8, 0) 8 1 True
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 16] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(1, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 2  1
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1']
+current node : 0
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, 1, 0)]
+
+
+######################################################
+get adjacencies:  [ 8  0  0 16] 1
+1 {8: 0, 16: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 2
+continuing forward
+get adjacencies:  [ 8  0  0 16] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0  0 16] 1
+(8, 0) 0 1 False
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 16] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 1 True
+no equivalence
+(8, 2) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 2
+2 2
+dict_items([(1, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 2  2
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [ 8  0  0 16] 1
+1 {8: 0, 16: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 1
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 16] 1
+get adjacencies:  [ 8  0  0 16] 1
+possible child :  [2, 8]
+get adjacencies:  [ 8  0  0 16] 1
+(8, 0) 1 2 True
+no equivalence
+(16, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 8  0  0 16] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [0 2 0 0] 3
+3 {2: 1} {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 16, 4: 0, 8: 1, 16: 2, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, -1)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 8  0  0 32] 1
+1 {8: 0, 32: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [ 8  0  0 32] 1
+(8, 0) 8 1 True
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 32] 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  32 1
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 1]
+current node : 2
+1 1
+dict_items([(1, 0)])
+[True, False, True, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 2  1
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 1, 'BT:1']
+current node : 0
+2 1
+2 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 1, -1)]
+
+
+######################################################
+get adjacencies:  [ 8  0  0 32] 1
+1 {8: 0, 32: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 1
+0 2
+continuing forward
+get adjacencies:  [ 8  0  0 32] 1
+possible child :  [1, 1]
+get adjacencies:  [ 8  0  0 32] 1
+(8, 0) 0 1 False
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 8  0  0 32] 1
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 1 True
+no equivalence
+(8, 2) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [1 0 0 0] 2
+2 {1: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 2
+2 2
+dict_items([(1, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 2  2
+[1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 0] 2
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 1
+
+######################################################
+get adjacencies:  [ 8  0  0 32] 1
+1 {8: 0, 32: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 1
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 8  0  0 32] 1
+get adjacencies:  [ 8  0  0 32] 1
+possible child :  [2, 8]
+get adjacencies:  [ 8  0  0 32] 1
+(8, 0) 1 2 True
+no equivalence
+(32, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 8  0  0 32] 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  32 2
+new eq list :  {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+
+######################################################
+get adjacencies:  [0 4 0 0] 3
+3 {4: 1} {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 16, 8: 1, 16: 0, 32: 2} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 2] 2
+2 {1: 0, 2: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+continuing forward
+get adjacencies:  [1 0 0 2] 2
+get adjacencies:  [1 0 0 2] 2
+get adjacencies:  [1 0 0 2] 2
+get adjacencies:  [1 0 0 2] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [1 0 0 2] 2
+(1, 0) 8 1 True
+no equivalence
+(2, 3) 0 1 False
+no equivalence
+get adjacencies:  [1 0 0 2] 2
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  2 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [1 0 0 2] 2
+2 {1: 0, 2: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 2
+continuing forward
+get adjacencies:  [1 0 0 2] 2
+possible child :  [1, 1]
+get adjacencies:  [1 0 0 2] 2
+(1, 0) 0 1 False
+no equivalence
+(2, 3) 0 1 False
+no equivalence
+get adjacencies:  [1 0 0 2] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 1
+2 2
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 1  2
+[1, 1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 2
+
+######################################################
+get adjacencies:  [1 0 0 2] 2
+2 {1: 0, 2: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [1 0 0 2] 2
+get adjacencies:  [1 0 0 2] 2
+possible child :  [2, 8]
+get adjacencies:  [1 0 0 2] 2
+(1, 0) 1 2 True
+no equivalence
+(2, 3) 0 2 False
+no equivalence
+get adjacencies:  [1 0 0 2] 2
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  2 2
+new eq list :  {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+
+######################################################
+get adjacencies:  [ 0  0 16  0] 3
+3 {16: 2} {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 2, 4: 0, 8: 8, 16: 16, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, 1)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 4] 2
+2 {1: 0, 4: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+continuing forward
+get adjacencies:  [1 0 0 4] 2
+get adjacencies:  [1 0 0 4] 2
+get adjacencies:  [1 0 0 4] 2
+get adjacencies:  [1 0 0 4] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [1 0 0 4] 2
+(1, 0) 8 1 True
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [1 0 0 4] 2
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  4 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, 1)]
+
+
+######################################################
+get adjacencies:  [1 0 0 4] 2
+2 {1: 0, 4: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 2
+continuing forward
+get adjacencies:  [1 0 0 4] 2
+possible child :  [1, 1]
+get adjacencies:  [1 0 0 4] 2
+(1, 0) 0 1 False
+no equivalence
+(4, 3) 0 1 False
+no equivalence
+get adjacencies:  [1 0 0 4] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 1
+2 2
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 1  2
+[1, 1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 2
+
+######################################################
+get adjacencies:  [1 0 0 4] 2
+2 {1: 0, 4: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [1 0 0 4] 2
+get adjacencies:  [1 0 0 4] 2
+possible child :  [2, 8]
+get adjacencies:  [1 0 0 4] 2
+(1, 0) 1 2 True
+no equivalence
+(4, 3) 0 2 False
+no equivalence
+get adjacencies:  [1 0 0 4] 2
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  4 2
+new eq list :  {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+
+######################################################
+get adjacencies:  [ 0  0 32  0] 3
+3 {32: 2} {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 2, 8: 8, 16: 0, 32: 16} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -2, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [1 0 0 8] 2
+2 {1: 0, 8: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+continuing forward
+get adjacencies:  [1 0 0 8] 2
+get adjacencies:  [1 0 0 8] 2
+get adjacencies:  [1 0 0 8] 2
+get adjacencies:  [1 0 0 8] 2
+possible child :  [1]
+get adjacencies:  [1 0 0 8] 2
+(1, 0) 8 1 True
+no equivalence
+(8, 3) 1 1 False
+get adjacencies:  [1 0 0 8] 2
+1
+
+######################################################
+get adjacencies:  [0 0 1 0] 3
+3 {1: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 'BT:1', 1, 1]
+current node : 3
+2 2
+dict_items([(1, 2)])
+[True, False, True, True]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 3  2
+[1, 'BT:1', 1, 1] 1
+test 3 1
+get adjacencies:  [0 0 1 0] 3
+backtrack_node: 2
+[1, 'BT:1', 1, 1] 1
+test 2 1
+get adjacencies:  [1 0 0 8] 2
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 'BT:1', 1, 1, 'BT:1']
+current node : 0
+3 2
+3 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [8]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 8 8 False
+get adjacencies:  [0 1 8 0] 0
+8
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 8 
+[1, 'BT:1', 1, 1, 'BT:1', 8]
+current node : 1
+4 3
+4 {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+traversed all
+-1 
+True
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 1  0  0 16] 2
+2 {1: 0, 16: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+continuing forward
+get adjacencies:  [ 1  0  0 16] 2
+get adjacencies:  [ 1  0  0 16] 2
+get adjacencies:  [ 1  0  0 16] 2
+get adjacencies:  [ 1  0  0 16] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [ 1  0  0 16] 2
+(1, 0) 8 1 True
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 1  0  0 16] 2
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  16 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (-1, -1, 0)]
+
+
+######################################################
+get adjacencies:  [ 1  0  0 16] 2
+2 {1: 0, 16: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 2
+continuing forward
+get adjacencies:  [ 1  0  0 16] 2
+possible child :  [1, 1]
+get adjacencies:  [ 1  0  0 16] 2
+(1, 0) 0 1 False
+no equivalence
+(16, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 1  0  0 16] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 1
+2 2
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 1  2
+[1, 1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 2
+
+######################################################
+get adjacencies:  [ 1  0  0 16] 2
+2 {1: 0, 16: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 1  0  0 16] 2
+get adjacencies:  [ 1  0  0 16] 2
+possible child :  [2, 8]
+get adjacencies:  [ 1  0  0 16] 2
+(1, 0) 1 2 True
+no equivalence
+(16, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 1  0  0 16] 2
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  16 2
+new eq list :  {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+
+######################################################
+get adjacencies:  [0 0 2 0] 3
+3 {2: 2} {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 16, 4: 0, 8: 8, 16: 2, 32: 0} True
+
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, -1)]
+
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 0
+0 0
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1, 1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 0 1 False
+no equivalence
+(8, 2) 0 1 False
+no equivalence
+get adjacencies:  [0 1 8 0] 0
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 1
+1 0
+1 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+dict_items([(8, 0)])
+[True, True, False, False]
+backtracking
+(1, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}})
+(4, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}})
+(16, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}})
+(32, {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}})
+('BT:1', {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}})
+backtrack_node: 1  1
+[1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 BT:1 
+[1, 'BT:1']
+current node : 0
+2 1
+2 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+possible child :  []
+False
+finished looking
+returned from adding eq False
+
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  8 1
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [ 1  0  0 32] 2
+2 {1: 0, 32: 3} {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+trace :-1 1 
+[1, 'BT:1', 1]
+current node : 2
+1 2
+continuing forward
+get adjacencies:  [ 1  0  0 32] 2
+get adjacencies:  [ 1  0  0 32] 2
+get adjacencies:  [ 1  0  0 32] 2
+get adjacencies:  [ 1  0  0 32] 2
+possible child :  [1, 4, 16, 32]
+get adjacencies:  [ 1  0  0 32] 2
+(1, 0) 8 1 True
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 1  0  0 32] 2
+new eq list :  {1: 8, 2: 0, 4: 0, 8: 1, 16: 0, 32: 0}
+has equivalence:  32 1
+finished looking
+returned from adding eq False
+
+finished looking
+0 2
+{} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+{1: {1: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+}}, 4: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+}}, 16: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+}}, 32: {'BT:2': {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+}}, 'BT:1': {2: {4: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, 8: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+}}}}
+[(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, -1, -1)]
+
+
+######################################################
+get adjacencies:  [ 1  0  0 32] 2
+2 {1: 0, 32: 3} {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+trace :-1 
+[]
+current node : 2
+0 2
+continuing forward
+get adjacencies:  [ 1  0  0 32] 2
+possible child :  [1, 1]
+get adjacencies:  [ 1  0  0 32] 2
+(1, 0) 0 1 False
+no equivalence
+(32, 3) 0 1 False
+no equivalence
+get adjacencies:  [ 1  0  0 32] 2
+new eq list :  {1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0}
+has equivalence:  1 1
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+
+######################################################
+get adjacencies:  [0 1 8 0] 0
+0 {1: 1, 8: 2} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 
+[1]
+current node : 0
+1 2
+continuing forward
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+get adjacencies:  [0 1 8 0] 0
+possible child :  [1]
+get adjacencies:  [0 1 8 0] 0
+(1, 1) 1 1 False
+get adjacencies:  [0 1 8 0] 0
+1
+
+######################################################
+get adjacencies:  [8 0 0 0] 1
+1 {8: 0} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 
+[1, 1]
+current node : 1
+2 2
+dict_items([(8, 0)])
+[True, True, True, False]
+backtracking
+('BT:2', {2: [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, 8: [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+})
+backtrack_node: 1  2
+[1, 1] 1
+test 1 1
+get adjacencies:  [8 0 0 0] 1
+backtrack_node: 0
+[1, 1] 1
+test 0 1
+get adjacencies:  [0 1 8 0] 0
+backtrack_node: 2
+
+######################################################
+get adjacencies:  [ 1  0  0 32] 2
+2 {1: 0, 32: 3} {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+trace :-1 1 1 BT:2 
+[1, 1, 'BT:1']
+current node : 2
+3 2
+3 {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+continuing forward
+get adjacencies:  [ 1  0  0 32] 2
+get adjacencies:  [ 1  0  0 32] 2
+possible child :  [2, 8]
+get adjacencies:  [ 1  0  0 32] 2
+(1, 0) 1 2 True
+no equivalence
+(32, 3) 0 2 False
+no equivalence
+get adjacencies:  [ 1  0  0 32] 2
+new eq list :  {1: 1, 2: 0, 4: 0, 8: 8, 16: 0, 32: 0}
+has equivalence:  32 2
+new eq list :  {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+
+######################################################
+get adjacencies:  [0 0 4 0] 3
+3 {4: 2} {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+trace :-1 1 1 BT:2 2 
+[1, 1, 'BT:1', 2]
+current node : 3
+4 3
+4 {1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2}
+traversed all
+-1 
+True
+True
+!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!
+{1: 1, 2: 0, 4: 16, 8: 8, 16: 0, 32: 2} True
+[array([[[1., 1.],
+        [1., 0.]],
+
+       [[1., 0.],
+        [0., 0.]]]), array([[[1.],
+        [1.],
+        [1.]],
+
+       [[0.],
+        [1.],
+        [0.]]]), array([[[1.],
+        [1.],
+        [1.]],
+
+       [[1.],
+        [0.],
+        [0.]]]), array([[[1., 0.],
+        [1., 1.]],
+
+       [[1., 0.],
+        [0., 0.]]]), array([[[0.],
+        [1.]],
+
+       [[1.],
+        [1.]],
+
+       [[1.],
+        [0.]]]), array([[[0., 1.],
+        [1., 1.]],
+
+       [[0., 1.],
+        [0., 0.]]]), array([[[1., 0.],
+        [1., 0.]],
+
+       [[1., 1.],
+        [0., 0.]]]), array([[[0.],
+        [1.],
+        [1.]],
+
+       [[1.],
+        [1.],
+        [0.]]]), array([[[1.],
+        [1.],
+        [1.],
+        [1.]]]), array([[[1.],
+        [1.]],
+
+       [[1.],
+        [1.]]])]
+{1: {'C0': 
+[[(0, 0, 0)]
+]
+}, 2: {'H2': 
+[[(0, 0, 0), (0, 1, 0)]
+]
+}, 3: {'H2_1C2': 
+[[(0, 0, 0), (0, 1, 0), (1, 0, 0)]
+, [(0, 0, 0), (0, 1, 0), (0, -1, 0)]
+]
+}, 4: {'H3_1C3': 
+[[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 0, 1)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, -1, 0)]
+]
+, 'H2_2C2': 
+[[(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 2, 0)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, 1)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (-1, 1, 0)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (0, 1, -1)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 0, 1)]
+, [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, -1, 0)]
+, [(0, 0, 0), (0, 1, 0), (0, -1, 0), (0, 2, 0)]
+]
+, '_4C2': 
+[[(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 0)]
+]
+}}[1, 1, 2, 10]
+Elapsed time: 2.751s
+(2446426, 2612279)

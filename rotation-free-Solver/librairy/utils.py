@@ -24,6 +24,7 @@ def has_equivalence(connection: int, _parse: int, eq_list: dict):
     Returns: true if there is an equivalence, false otherwise.
 
     """
+    print("has equivalence: ", connection, _parse)
     if _parse in eq_list.values() and (eq_list[connection] != _parse):
         return False
 
