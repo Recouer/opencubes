@@ -1,6 +1,7 @@
 from __future__ import annotations
 import copy
 from collections import Counter
+import geometry_utils as gu
 from polycube import PolyCube
 from utils import has_equivalence
 from geometry_utils import get_opposite
@@ -62,12 +63,29 @@ class Sorter:
         child = self
         print(self)
         print("adding polycube")
+
+
         for _parse in polyparse:
             print("parse: ", _parse)
             if isinstance(_parse, str):
                 child = child.__add_get_child(_parse)
             if isinstance(_parse, int):
                 print(eq_dict, _parse)
+
+                # function to complete eq_dict so that there isn't discrepancies with the parsing
+                if eq_dict[_parse] != 0 and eq_dict[eq_dict[_parse]] == 0:
+                    if _parse not in eq_dict.values():
+                        eq_dict[eq_dict[_parse]] = _parse
+                        eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(_parse)
+                    else:
+                        for i in range(6):
+                            new_parse = int(2**i) 
+                            if eq_dict[new_parse] == _parse:
+                                eq_dict[eq_dict[_parse]] = new_parse
+                                eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(new_parse)
+
+
+
                 child = child.__add_get_child(eq_dict[_parse] if eq_dict[_parse] != 0 else _parse)
         if child.leaf_polycube is None:
             child.leaf_polycube = polycube
