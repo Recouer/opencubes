@@ -3,7 +3,7 @@ import copy
 from collections import Counter
 import geometry_utils as gu
 from polycube import PolyCube
-from utils import has_equivalence
+from utils import has_equivalence, fill_eq_dict
 from geometry_utils import get_opposite
 
 
@@ -59,34 +59,19 @@ class Sorter:
 
         return child
 
-    def add_polycube(self, polycube: PolyCube, polyparse: list[int], eq_dict: dict[int, int]) -> bool:
+    def add_polycube(self, polycube: PolyCube, polyparse: list[int]) -> bool:
         child = self
         print(self)
         print("adding polycube")
-
 
         for _parse in polyparse:
             print("parse: ", _parse)
             if isinstance(_parse, str):
                 child = child.__add_get_child(_parse)
             if isinstance(_parse, int):
-                print(eq_dict, _parse)
-
                 # function to complete eq_dict so that there isn't discrepancies with the parsing
-                if eq_dict[_parse] != 0 and eq_dict[eq_dict[_parse]] == 0:
-                    if _parse not in eq_dict.values():
-                        eq_dict[eq_dict[_parse]] = _parse
-                        eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(_parse)
-                    else:
-                        for i in range(6):
-                            new_parse = int(2**i) 
-                            if eq_dict[new_parse] == _parse:
-                                eq_dict[eq_dict[_parse]] = new_parse
-                                eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(new_parse)
 
-
-
-                child = child.__add_get_child(eq_dict[_parse] if eq_dict[_parse] != 0 else _parse)
+                child = child.__add_get_child(_parse if _parse != 0 else _parse)
         if child.leaf_polycube is None:
             child.leaf_polycube = polycube
             return True
@@ -121,8 +106,9 @@ class PolycubeSorter:
         adjacencies = polycube.get_adjacencies(current_node)
         print(current_node, adjacencies, eq_list)
         print("trace :" + sorter.show_path())
-        print(current_parse)
+        print("current parse : ", current_parse)
         print(f"current node : {current_node}")
+        print("traversed_list: ", traversed_list)
 
         is_inside = False
 
@@ -131,7 +117,7 @@ class PolycubeSorter:
             for key, value in eq_list.items():
                 final_eq_list[key] = value
             max_depth = depth
-            print(max_depth, final_eq_list)
+            print("max_depth, final_eq_list", max_depth, final_eq_list)
 
         if all(traversed_list):
             print("traversed all")
@@ -149,17 +135,17 @@ class PolycubeSorter:
                 print(child)
                 if isinstance(child[0], str):
                     # check that the backtracking is correct: that is, that we effectively need to backtrack the
-                    # right amount of cubes in order to get the first cube with a connection to a nonexplored cube
+                    # right amount of cubes in order to get the first cube with a connection to an unexplored cube
                     backtrack: int = int(child[0].split(':')[1])
                     backtrack_node: int = current_node
                     backtracks_rec: int = 0
                     print(f"backtrack_node: {backtrack_node} ", backtrack)
                     for i in range(len(current_parse) - 1, len(current_parse) - 1 - backtrack, -1):
                         index = i - backtracks_rec
-                        print(current_parse, current_parse[index])
+                        print("current parse, parse[index]: ", current_parse, current_parse[index])
 
-# possible error in this part of the code:
-# we have to check that we 
+                        # possible error in this part of the code:
+                        # we have to check that we
 
                         while isinstance(current_parse[index], str):
                             backtracks_rec += int(current_parse[index].split(':')[1])
@@ -182,11 +168,12 @@ class PolycubeSorter:
                         current_parse.append(parse)
                     else:
                         current_parse.append(child[0])
-                    is_inside_rec, max_depth = self.__is_inside_rec(child[1], polycube, backtrack_node, new_traversed_list,
-                                                      copy.deepcopy(current_parse), eq_list,
-                                                      final_eq_list, (depth + 1), max_depth)
+                    is_inside_rec, max_depth = self.__is_inside_rec(child[1], polycube, backtrack_node,
+                                                                    new_traversed_list,
+                                                                    copy.deepcopy(current_parse), eq_list,
+                                                                    final_eq_list, (depth + 1), max_depth)
                     is_inside |= is_inside_rec
-                    print(is_inside)
+                    print("is inside: ", is_inside)
                     if is_inside:
                         return is_inside, max_depth
 
@@ -199,20 +186,20 @@ class PolycubeSorter:
 
             # if we find a correspondence between the first element of the sorter and an unexplored cube
             # then we update the equivalence list and continue inside
-            possible_child = []
+            possible_child = set([])
 
             print("trying children :")
-            print(sorter.children.items())
+            print(sorter.children)
             print(polycube.get_adjacencies(current_node).items())
             for key, value in sorter.children.items():
                 if isinstance(key, int):
                     for adja in polycube.get_adjacencies(current_node).items():
                         if eq_list[adja[0]] != 0:
                             if eq_list[adja[0]] == key and not traversed_list[adja[1]]:
-                                possible_child += [key]
-                                
+                                possible_child.add(key)
+
                         else:
-                            possible_child += [key]
+                            possible_child.add(key)
 
             print("possible child : ", possible_child)
             if not possible_child:
@@ -224,41 +211,46 @@ class PolycubeSorter:
             minimum_sorter: int = min(possible_child)
             for adja in polycube.get_adjacencies(current_node).items():
                 print(adja, eq_list[adja[0]], minimum_sorter, traversed_list[adja[1]])
-                if eq_list[adja[0]] != 0 and not traversed_list[adja[1]] and eq_list[adja[0]] == minimum_sorter:
+                if eq_list[adja[0]] != 0 and not traversed_list[adja[1]] \
+                        and eq_list[adja[0]] == minimum_sorter:
                     current_parse += [minimum_sorter]
                     new_node = polycube.get_adjacent_node(node=current_node, adjacency=adja[0])
                     new_traversed_list = copy.deepcopy(traversed_list)
                     print(minimum_sorter)
                     is_inside_rec, max_depth = self.__is_inside_rec(sorter.children[minimum_sorter], polycube, new_node,
-                                                      new_traversed_list, copy.deepcopy(current_parse), eq_list,
-                                                      final_eq_list, (depth + 1), max_depth)
+                                                                    new_traversed_list, copy.deepcopy(current_parse),
+                                                                    eq_list,
+                                                                    final_eq_list, (depth + 1), max_depth)
                     is_inside |= is_inside_rec
                     print(is_inside)
                     if is_inside:
                         return is_inside, max_depth
                     current_parse.pop()
-                    can_create_equivalence = False
                     break
                 else:
-                    print("no equivalence")
+                    print("no equivalence :", eq_list[adja[0]], minimum_sorter,
+                          "traversed: ", traversed_list[adja[1]])
 
             if can_create_equivalence:
                 print("can create equivalence")
                 possible_connection_equivalences = dict([adja for adja in polycube.get_adjacencies(current_node).items()
-                                                        if eq_list[adja[0]] == 0 and not traversed_list[adja[1]]])
+                                                         if eq_list[adja[0]] == 0 and not traversed_list[adja[1]]])
                 for connection in possible_connection_equivalences.keys():
                     new_eq_list = copy.deepcopy(eq_list)
                     print("new eq list : ", new_eq_list)
                     for child in possible_child:
-                        print(connection, child)
+                        print("connection, child: ", connection, child)
                         if has_equivalence(connection, child, new_eq_list):
                             print("new eq list : ", new_eq_list)
                             new_node = possible_connection_equivalences[connection]
                             current_parse += [child]
                             new_traversed_list = copy.deepcopy(traversed_list)
-                            is_inside_rec, max_depth = self.__is_inside_rec(sorter.children[minimum_sorter], polycube, new_node,
-                                                            new_traversed_list, copy.deepcopy(current_parse),
-                                                            new_eq_list, final_eq_list, (depth + 1), max_depth)
+                            is_inside_rec, max_depth = self.__is_inside_rec(sorter.children[child], polycube,
+                                                                            new_node,
+                                                                            new_traversed_list,
+                                                                            copy.deepcopy(current_parse),
+                                                                            new_eq_list, final_eq_list, (depth + 1),
+                                                                            max_depth)
                             is_inside |= is_inside_rec
                             if is_inside:
                                 return is_inside, max_depth
@@ -267,6 +259,7 @@ class PolycubeSorter:
                             print()
 
         print("finished looking")
+        print("max_depth, final_eq_list", max_depth, final_eq_list)
         return is_inside, max_depth
 
     def try_add_polycube(self, polycube: PolyCube) -> bool:
@@ -288,12 +281,9 @@ class PolycubeSorter:
 
             polycube_parses = [parses for parses in polycube.get_parses(self.starter_node)]
             if polycube_parses:
-                self.sorter.add_polycube(polycube, polycube_parses[0],
-                                     eq_dict={1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})
+                self.sorter.add_polycube(polycube, polycube_parses[0])
             else:
-                self.sorter.add_polycube(polycube, [],
-                                     eq_dict={1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})
-
+                self.sorter.add_polycube(polycube, [])
 
             return True
 
@@ -304,24 +294,25 @@ class PolycubeSorter:
             max_depth = 0
             final_cube = -1
 
+            print("\n\n\n\n\n\n\n")
             print(self.starter_node)
+            print(self.sorter)
             for cube in polycube.get_nodes_with_NAdjacencies(self.starter_node):
-                print()
                 old_max_depth = max_depth
                 new_eq_list: dict[int, int] = dict({1: 0, 2: 0, 4: 0, 8: 0, 16: 0, 32: 0})
-                print(self.sorter)
+
                 print(polycube)
                 is_inside, max_depth = self.__is_inside_rec(self.sorter, polycube, cube,
-                                                 [False for _ in range(len(polycube.adjacency_matrix))],
-                                                 [], equivalence_list, new_eq_list, max_depth=max_depth)
+                                                            [False for _ in range(len(polycube.adjacency_matrix))],
+                                                            [], equivalence_list, new_eq_list, max_depth=max_depth)
                 if is_inside:
                     can_be_added = False
                     print("!!!!!!!!!!!!!!!!!!!  CANNOT BE ADDED !!!!!!!!!!!!!!!!!!!!!!!!")
                     print(new_eq_list, is_inside)
                     return False
 
-                print(old_max_depth, max_depth)
-                print(final_eq_list, new_eq_list)
+                print("old max_depth, max_depth: ", old_max_depth, max_depth)
+                print("final eq_list, new eq_list: ", final_eq_list, new_eq_list)
                 if old_max_depth < max_depth:
                     for key, value in new_eq_list.items():
                         final_eq_list[key] = value
@@ -331,7 +322,11 @@ class PolycubeSorter:
                 raise ValueError("cube with wrong geometry inserted")
 
             if can_be_added:
-                parse = polycube.get_parse_from_cube(final_cube)
-                self.sorter.add_polycube(polycube, parse, final_eq_list)
+                fill_eq_dict(eq_dict=final_eq_list)
+                parse = polycube.get_parse_from_cube(final_cube, eq_list=final_eq_list)
+                print("final eq_list : ", final_eq_list)
+                is_added = self.sorter.add_polycube(polycube, parse)
+                if is_added is False:
+                    raise AssertionError("tried to add a polycube that was already in the graph")
                 return True
             return False

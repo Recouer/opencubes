@@ -92,6 +92,21 @@ def update_adjacency_matrix(adjacency_matrix, position_vector) -> None:
             adjacency_matrix[size - 1, i] = adj
 
 
+def fill_eq_dict(eq_dict: dict[int, int]):
+    for power in range(6):
+        _parse = int(2 ** power)
+        if eq_dict[_parse] != 0 and eq_dict[eq_dict[_parse]] == 0:
+            if _parse not in eq_dict.values():
+                eq_dict[eq_dict[_parse]] = _parse
+                eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(_parse)
+            else:
+                for i in range(6):
+                    new_parse = int(2 ** i)
+                    if eq_dict[new_parse] == _parse:
+                        eq_dict[eq_dict[_parse]] = new_parse
+                        eq_dict[gu.get_opposite(eq_dict[_parse])] = gu.get_opposite(new_parse)
+
+
 def render_shapes(shapes: list[np.ndarray], path: str):
     n = len(shapes)
     dim = max(max(a.shape) for a in shapes)

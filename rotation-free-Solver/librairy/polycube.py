@@ -13,10 +13,11 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
                      parse_list: list[any],
                      node: int,
                      backtrack: int,
-                     traversed_node: list[bool]) -> int:
+                     traversed_node: list[bool],
+                     eq_list: dict[int, int]) -> int:
     traversed_node[node] = True
     adjacency_list = dict(
-        [(adjacency, i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
+        [(eq_list[adjacency], i) for (i, adjacency) in enumerate(adjacency_matrix[node]) if adjacency != 0]
     )
     # error with the backtracking values
     for adjacency in sort_order:
@@ -27,7 +28,7 @@ def create_parse_rec(adjacency_matrix: npt.NDArray,
 
             parse_list.append(adjacency)
             backtrack = create_parse_rec(adjacency_matrix, parse_list, adjacency_list[adjacency], backtrack,
-                                         traversed_node)
+                                         traversed_node, eq_list)
             backtrack += 1
     return backtrack
 
@@ -87,10 +88,12 @@ class PolyCube:
 
         return threed_tensor
 
-    def get_parse_from_cube(self, cube: int):
+    def get_parse_from_cube(self, cube: int, eq_list: dict[int, int] = []):
         parse_list = []
+        if not eq_list:
+            eq_list = dict({1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})
         create_parse_rec(self.adjacency_matrix, parse_list, cube, 0,
-                         [False for _ in range(len(self.adjacency_matrix))])
+                         [False for _ in range(len(self.adjacency_matrix))], eq_list)
         print("using cube :", cube)
         return parse_list
 
@@ -118,7 +121,8 @@ class PolyCube:
         for index in indexes:
             parse_list = []
             create_parse_rec(self.adjacency_matrix, parse_list, index, 0,
-                             [False for _ in range(len(self.adjacency_matrix))])
+                             [False for _ in range(len(self.adjacency_matrix))],
+                             dict(dict({1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32})))
             if parse_list:
                 if isinstance(parse_list[len(parse_list) - 1], str):
                     parse_list.pop(len(parse_list) - 1)
