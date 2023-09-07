@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     solver = CubeSolver()
     solver.solve(5)
-    solver.render_shapes("out", 5)
+    solver.render_shapes("out", 4)
     print(solver)
 
     # Stop the timer

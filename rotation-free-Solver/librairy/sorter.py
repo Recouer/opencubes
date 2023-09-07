@@ -327,6 +327,7 @@ class PolycubeSorter:
                 print("final eq_list : ", final_eq_list)
                 is_added = self.sorter.add_polycube(polycube, parse)
                 if is_added is False:
+                    return False
                     raise AssertionError("tried to add a polycube that was already in the graph")
                 return True
             return False
